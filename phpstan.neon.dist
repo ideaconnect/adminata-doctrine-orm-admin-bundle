@@ -1,0 +1,36 @@
+# PHPStan for this package: the forked sources, their suite, and the test application they run
+# against. The upstream baseline is imported under phpstan/, with its paths rewritten.
+
+includes:
+    - phpstan/baseline.neon
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 8
+    symfony:
+        consoleApplicationLoader: ./phpstan-console-application.php
+    paths:
+        - src
+        - tests
+    scanFiles:
+        - vendor/symfony/dependency-injection/Loader/Configurator/ContainerConfigurator.php
+    excludePaths:
+        analyseAndScan:
+            # Symfony writes this IDE helper into the test application's config directory on every
+            # debug-mode build. It is generated and gitignored, it names config classes for bundles
+            # the kernel that produced it happened to register, and analysing it fails as soon as
+            # one of those bundles is not installed. The php-cs-fixer configs skip it too.
+            - tests/App/config/reference.php
+    treatPhpDocTypesAsCertain: false
+    checkInternalClassCaseSensitivity: true
+    checkMissingVarTagTypehint: true
+    checkMissingTypehints: true
+    checkUninitializedProperties: true
+    featureToggles:
+        skipCheckGenericClasses:
+            - Symfony\Component\Form\AbstractType
+            - Symfony\Component\Form\FormBuilderInterface
+            - Symfony\Component\Form\FormErrorIterator
+            - Symfony\Component\Form\FormInterface
+            - Symfony\Component\Form\FormTypeExtensionInterface
+            - Symfony\Component\Form\FormTypeInterface

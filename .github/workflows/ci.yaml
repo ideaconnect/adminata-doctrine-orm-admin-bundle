@@ -1,0 +1,150 @@
+name: CI
+
+on:
+    schedule:
+        - cron: '30 1 * * *'
+    push:
+        branches:
+            - main
+    pull_request:
+
+permissions:
+    contents: read
+
+jobs:
+    test:
+        name: PHP ${{ matrix.php-version }} + ${{ matrix.dependencies }}${{ matrix.symfony-require && format(' + symfony {0}', matrix.symfony-require) || '' }}
+
+        runs-on: ubuntu-latest
+
+        env:
+            SYMFONY_REQUIRE: ${{ matrix.symfony-require }}
+
+        # adminata supports MySQL, MariaDB and Percona; there is no SQLite support, so this suite
+        # needs a real server. The port matches docker-compose.yml so phpunit.xml.dist's defaults
+        # work unchanged.
+        #
+        # Panther is deliberately driven by the Firefox and geckodriver preinstalled on the runner
+        # rather than a Selenium service container: a container cannot reach the runner's loopback,
+        # where Panther starts its own web server.
+        services:
+            database:
+                image: mysql:8.4
+                env:
+                    MYSQL_ROOT_PASSWORD: adminata
+                    MYSQL_DATABASE: adminata_orm_test
+                ports:
+                    - 7010:3306
+                options: >-
+                    --health-cmd "mysqladmin ping -h 127.0.0.1 -padminata"
+                    --health-interval 5s
+                    --health-timeout 5s
+                    --health-retries 20
+
+        strategy:
+            fail-fast: false
+            matrix:
+                php-version:
+                    - '8.4'
+                    - '8.5'
+                dependencies: [highest]
+                symfony-require: ['']
+                phpunit-flags: ['']
+                include:
+                    # The floors, which is what this row exists to prove. Risky-test bookkeeping
+                    # differs between Symfony minors — the older error handler leaves handlers
+                    # installed — and that is noise here, so only this row tolerates it.
+                    - php-version: '8.4'
+                      dependencies: lowest
+                      symfony-require: ''
+                      phpunit-flags: --do-not-fail-on-risky
+                    # Both supported Symfony lines, pinned through Flex.
+                    - php-version: '8.5'
+                      dependencies: highest
+                      symfony-require: 7.4.*
+                      phpunit-flags: ''
+                    - php-version: '8.5'
+                      dependencies: highest
+                      symfony-require: 8.1.*
+                      phpunit-flags: ''
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Install PHP with extensions
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  coverage: none
+                  tools: composer:v2, flex
+                  extensions: pdo_mysql
+
+            - name: Add PHPUnit matcher
+              run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
+            - name: Install Composer dependencies (${{ matrix.dependencies }})
+              uses: ramsey/composer-install@v4
+              with:
+                  dependency-versions: ${{ matrix.dependencies }}
+
+            - name: Run the test suite
+              run: vendor/bin/phpunit ${{ matrix.phpunit-flags }}
+
+    qa:
+        name: ${{ matrix.tool }}
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                include:
+                    - tool: php-cs-fixer
+                      run: make lint
+                    - tool: phpstan
+                      run: make phpstan
+                    - tool: rector
+                      run: make rector
+                    - tool: composer-normalize
+                      run: composer normalize --dry-run
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Install PHP with extensions
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.4'
+                  coverage: none
+                  tools: composer:v2
+                  extensions: pdo_mysql
+
+            - name: Install Composer dependencies
+              uses: ramsey/composer-install@v4
+
+            - name: ${{ matrix.tool }}
+              run: ${{ matrix.run }}
+
+    documentation:
+        name: Documentation
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Install Python
+              uses: actions/setup-python@v6
+              with:
+                  python-version: '3.13'
+
+            - name: Install Sphinx
+              run: pip install -r docs/requirements.txt
+
+            # Warnings are errors: a cross-reference that stops resolving fails the build rather
+            # than shipping a dead link.
+            - name: Build the documentation
+              run: sphinx-build -W --keep-going -b html docs var/docs

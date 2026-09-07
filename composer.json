@@ -1,0 +1,150 @@
+{
+    "name": "idct/adminata-doctrine-orm-admin-bundle",
+    "description": "Integrate Doctrine ORM into Adminata. A hard fork of sonata-project/doctrine-orm-admin-bundle, installed in its place.",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "keywords": [
+        "adminata",
+        "admin",
+        "admin-generator",
+        "bundle",
+        "doctrine",
+        "orm",
+        "sonata",
+        "symfony"
+    ],
+    "authors": [
+        {
+            "name": "IDCT Bartosz Pachołek",
+            "email": "bartosz@idct.tech",
+            "homepage": "https://idct.tech",
+            "role": "Maintainer of the fork"
+        },
+        {
+            "name": "Thomas Rabaix",
+            "email": "thomas.rabaix@sonata-project.org",
+            "homepage": "https://sonata-project.org",
+            "role": "Original author of the forked package"
+        },
+        {
+            "name": "Sonata Community",
+            "homepage": "https://github.com/sonata-project/SonataDoctrineORMAdminBundle/contributors",
+            "role": "Original authors of the forked package"
+        }
+    ],
+    "homepage": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle",
+    "support": {
+        "issues": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle/issues",
+        "source": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../adminata",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ideaconnect/adminata.git"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "doctrine/collections": "^2.0 || ^3.0",
+        "doctrine/dbal": "^4.0",
+        "doctrine/doctrine-bundle": "^3.0",
+        "doctrine/orm": "^3.6",
+        "doctrine/persistence": "^4.0",
+        "idct/adminata": "^1.0@dev",
+        "symfony/config": "^7.4 || ^8.0",
+        "symfony/console": "^7.4 || ^8.0",
+        "symfony/dependency-injection": "^7.4 || ^8.0",
+        "symfony/doctrine-bridge": "^7.4 || ^8.0",
+        "symfony/form": "^7.4 || ^8.0",
+        "symfony/framework-bundle": "^7.4 || ^8.0",
+        "symfony/http-foundation": "^7.4 || ^8.0",
+        "symfony/http-kernel": "^7.4 || ^8.0",
+        "symfony/options-resolver": "^7.4 || ^8.0",
+        "symfony/property-access": "^7.4 || ^8.0",
+        "twig/twig": "^3.28"
+    },
+    "require-dev": {
+        "dama/doctrine-test-bundle": "^8.6",
+        "doctrine/doctrine-fixtures-bundle": "^4.3",
+        "ergebnis/composer-normalize": "^2.52",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "knplabs/knp-menu-bundle": "^3.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^6.3",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.2",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpunit/phpunit": "^13.3",
+        "rector/rector": "^2.6",
+        "sonata-project/entity-audit-bundle": "^1.23",
+        "symfony/browser-kit": "^7.4 || ^8.0",
+        "symfony/css-selector": "^7.4 || ^8.0",
+        "symfony/dom-crawler": "^7.4 || ^8.0",
+        "symfony/filesystem": "^7.4 || ^8.0",
+        "symfony/panther": "^2.4",
+        "symfony/security-acl": "^3.3",
+        "symfony/security-bundle": "^7.4 || ^8.0",
+        "symfony/stimulus-bundle": "^3.4",
+        "symfony/twig-bundle": "^7.4 || ^8.0",
+        "symfony/uid": "^7.4 || ^8.0",
+        "symfony/yaml": "^7.4 || ^8.0"
+    },
+    "replace": {
+        "sonata-project/doctrine-orm-admin-bundle": "4.21.0"
+    },
+    "conflict": {
+        "sonata-project/entity-audit-bundle": ">=2.0",
+        "symfony/security-acl": "<3.1 || >=4.0"
+    },
+    "provide": {
+        "sonata-project/admin-bundle-persistency-layer": "1.0.0"
+    },
+    "suggest": {
+        "sonata-project/entity-audit-bundle": "To enable the entity history pages (post-1.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sonata\\DoctrineORMAdminBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sonata\\DoctrineORMAdminBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true,
+            "symfony/runtime": false
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "test:cs": "php-cs-fixer check --diff",
+        "test:everything": [
+            "@test:cs",
+            "@test:rector",
+            "@test:phpstan",
+            "@test:phpunit"
+        ],
+        "test:phpstan": "phpstan analyse --memory-limit=1G",
+        "test:phpunit": "phpunit",
+        "test:rector": "rector process --dry-run"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

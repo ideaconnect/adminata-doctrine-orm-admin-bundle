@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures;
 
-use Adminata\Tests\Support\TestDatabase;
+use Sonata\DoctrineORMAdminBundle\Tests\Support\TestDatabase;
 use Doctrine\Common\EventManager;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
@@ -29,7 +29,7 @@ final class TestEntityManagerFactory
 
         // adminata supports MySQL, MariaDB and Percona only, so these tests run against the
         // MySQL service of the repository's docker-compose.yml on their own database, created by
-        // Adminata\Tests\PHPUnit\OrmDatabaseExtension.
+        // Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\DatabaseExtension.
         $connection = DriverManager::getConnection(
             TestDatabase::parameters('ADMINATA_TEST_DATABASE_URL', 'adminata_orm_unit_test'),
             $config

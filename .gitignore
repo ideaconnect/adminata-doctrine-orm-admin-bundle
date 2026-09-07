@@ -1,0 +1,11 @@
+/vendor/
+/var/
+/.phpunit.cache/
+/composer.lock
+.DS_Store
+/build/
+/.php-cs-fixer.forked.cache
+/.php-cs-fixer.adminata.cache
+/tests/App/public/bundles/
+# Symfony 8 writes this IDE helper into the kernel's config dir on every debug-mode build.
+/tests/App/config/reference.php

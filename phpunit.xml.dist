@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    The suite of the forked sonata-project/doctrine-orm-admin-bundle, running against
+    idct/adminata. Its databases are created by Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\
+    DatabaseExtension the first time the suite loads.
+-->
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         colors="true"
+         failOnWarning="true"
+         failOnRisky="true"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         displayDetailsOnAllIssues="true"
+         cacheDirectory=".phpunit.cache"
+         bootstrap="vendor/autoload.php"
+>
+    <testsuites>
+        <testsuite name="orm">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source ignoreSuppressionOfDeprecations="true">
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+
+    <extensions>
+        <bootstrap class="Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\DatabaseExtension" />
+        <bootstrap class="Symfony\Component\Panther\ServerExtension" />
+        <bootstrap class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
+    </extensions>
+
+    <php>
+        <ini name="precision" value="8" />
+        <server name="KERNEL_CLASS" value="Sonata\DoctrineORMAdminBundle\Tests\App\AppKernel" />
+        <server name="PANTHER_WEB_SERVER_DIR" value="./tests/App/public/" />
+        <!-- adminata supports MySQL, MariaDB and Percona; `docker compose up -d` starts a
+             matching MySQL. Override these to run the suite against your own server. -->
+        <server name="DATABASE_URL" value="mysql://root:adminata@127.0.0.1:7010/adminata_orm_test?serverVersion=8.4.0&amp;charset=utf8mb4" />
+        <server name="ADMINATA_TEST_DATABASE_URL" value="mysql://root:adminata@127.0.0.1:7010/adminata_orm_unit_test?serverVersion=8.4.0&amp;charset=utf8mb4" />
+        <server name="APP_ENV" value="test" force="true" />
+        <server name="APP_DEBUG" value="false" />
+    </php>
+</phpunit>
