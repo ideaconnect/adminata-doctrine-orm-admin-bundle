@@ -51,7 +51,13 @@ running server. `docker compose up -d database` starts a matching MySQL on port 
 suite elsewhere with `DATABASE_URL` and `ADMINATA_TEST_DATABASE_URL`.
 
 The Panther tests drive a real browser. Either install a geckodriver, or run
-`docker compose up -d selenium` and export `PANTHER_SELENIUM_HOST=http://127.0.0.1:4444`.
+`docker compose up -d selenium` and export `PANTHER_SELENIUM_HOST=http://127.0.0.1:4444`. With that
+set, the test application is served on every interface and the browser is handed
+`host.docker.internal`, which is the only address a container can reach the host on.
+
+The `legacy-ui` group is excluded by default: those scenarios click through the Bootstrap markup
+adminata replaced, and they pass again when its milestones M3 and M4 rewrite the templates. Run
+them with `vendor/bin/phpunit --group legacy-ui` to see where that stands.
 
 ## Licence
 

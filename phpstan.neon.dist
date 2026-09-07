@@ -20,7 +20,7 @@ parameters:
             # debug-mode build. It is generated and gitignored, it names config classes for bundles
             # the kernel that produced it happened to register, and analysing it fails as soon as
             # one of those bundles is not installed. The php-cs-fixer configs skip it too.
-            - tests/App/config/reference.php
+            - tests/App/config/reference.php (?)
     treatPhpDocTypesAsCertain: false
     checkInternalClassCaseSensitivity: true
     checkMissingVarTagTypehint: true

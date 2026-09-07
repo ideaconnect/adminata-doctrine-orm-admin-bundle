@@ -21,6 +21,16 @@
         </testsuite>
     </testsuites>
 
+    <!-- Browser scenarios that click through the inherited Bootstrap interface. adminata replaced
+         its CSS and JavaScript in P1-02; its milestones M3 and M4 rewrite the templates and drop
+         the group again. Excluded here for the same reason adminata's own configuration excludes
+         it — running them proves nothing until those templates exist. -->
+    <groups>
+        <exclude>
+            <group>legacy-ui</group>
+        </exclude>
+    </groups>
+
     <source ignoreSuppressionOfDeprecations="true">
         <include>
             <directory>src</directory>
@@ -36,7 +46,6 @@
     <php>
         <ini name="precision" value="8" />
         <server name="KERNEL_CLASS" value="Sonata\DoctrineORMAdminBundle\Tests\App\AppKernel" />
-        <server name="PANTHER_WEB_SERVER_DIR" value="./tests/App/public/" />
         <!-- adminata supports MySQL, MariaDB and Percona; `docker compose up -d` starts a
              matching MySQL. Override these to run the suite against your own server. -->
         <server name="DATABASE_URL" value="mysql://root:adminata@127.0.0.1:7010/adminata_orm_test?serverVersion=8.4.0&amp;charset=utf8mb4" />

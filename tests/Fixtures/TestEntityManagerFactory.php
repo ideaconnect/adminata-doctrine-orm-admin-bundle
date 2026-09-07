@@ -13,12 +13,12 @@ declare(strict_types=1);
 
 namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures;
 
-use Sonata\DoctrineORMAdminBundle\Tests\Support\TestDatabase;
 use Doctrine\Common\EventManager;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMSetup;
+use Sonata\DoctrineORMAdminBundle\Tests\Support\TestDatabase;
 
 final class TestEntityManagerFactory
 {

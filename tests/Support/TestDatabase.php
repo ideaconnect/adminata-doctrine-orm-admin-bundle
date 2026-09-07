@@ -95,5 +95,4 @@ final class TestDatabase
 
         return DriverManager::getConnection($parameters);
     }
-
 }

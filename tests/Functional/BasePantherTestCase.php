@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Sonata\DoctrineORMAdminBundle\Tests\Functional;
 
 use Facebook\WebDriver\Remote\DesiredCapabilities;
+use Sonata\DoctrineORMAdminBundle\Tests\Support\TestServer;
 use Symfony\Component\Panther\Client;
 use Symfony\Component\Panther\PantherTestCase;
 
@@ -23,6 +24,16 @@ abstract class BasePantherTestCase extends PantherTestCase
 
     protected function setUp(): void
     {
+        // The application is served by TestServer rather than by Panther, whose own server binds
+        // the loopback interface: a browser in a container cannot reach that. Handing Panther an
+        // `external_base_uri` makes it skip starting one, so there is still exactly one server,
+        // and the relative paths these tests request resolve against it unchanged.
+        $options = [
+            'external_base_uri' => TestServer::baseUri(),
+            'connection_timeout_in_ms' => 5000,
+            'request_timeout_in_ms' => 60000,
+        ];
+
         $seleniumHost = self::stringFromServer('PANTHER_SELENIUM_HOST');
 
         // Same switch as idct/sonata-admin-mongodb-bundle: with PANTHER_SELENIUM_HOST set,
@@ -31,11 +42,7 @@ abstract class BasePantherTestCase extends PantherTestCase
         // default 4444 when something else on the machine already listens there.
         if (null !== $seleniumHost) {
             $this->client = static::createPantherClient(
-                [
-                    'browser' => PantherTestCase::SELENIUM,
-                    'connection_timeout_in_ms' => 5000,
-                    'request_timeout_in_ms' => 60000,
-                ],
+                ['browser' => PantherTestCase::SELENIUM] + $options,
                 [],
                 [
                     'host' => $seleniumHost,
@@ -49,11 +56,7 @@ abstract class BasePantherTestCase extends PantherTestCase
         $port = self::stringFromServer('PANTHER_FIREFOX_PORT');
 
         $this->client = static::createPantherClient(
-            [
-                'browser' => PantherTestCase::FIREFOX,
-                'connection_timeout_in_ms' => 5000,
-                'request_timeout_in_ms' => 60000,
-            ],
+            ['browser' => PantherTestCase::FIREFOX] + $options,
             [],
             null !== $port ? ['port' => (int) $port] : [],
         );
