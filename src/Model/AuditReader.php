@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Model;
 
-use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
-use SimpleThings\EntityAudit\Revision as EntityAuditRevision;
 use IDCT\Adminata\Model\AuditReaderInterface;
 use IDCT\Adminata\Model\Revision;
+use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
+use SimpleThings\EntityAudit\Revision as EntityAuditRevision;
 
 /**
  * @phpstan-template T of object

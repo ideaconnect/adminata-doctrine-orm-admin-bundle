@@ -16,9 +16,9 @@ namespace IDCT\Adminata\DoctrineORM\Filter;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Query\Expr\Orx;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 final class ModelFilter extends Filter

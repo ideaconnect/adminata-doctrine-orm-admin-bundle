@@ -16,8 +16,8 @@ namespace IDCT\Adminata\DoctrineORM\Tests\App\Admin;
 use IDCT\Adminata\Admin\AbstractAdmin;
 use IDCT\Adminata\Datagrid\DatagridMapper;
 use IDCT\Adminata\Datagrid\ListMapper;
-use IDCT\Adminata\Form\FormMapper;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Car;
+use IDCT\Adminata\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 

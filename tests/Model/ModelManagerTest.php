@@ -28,11 +28,6 @@ use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\UnitOfWork;
 use Doctrine\Persistence\ManagerRegistry;
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
-use IDCT\Adminata\Exception\LockException;
-use IDCT\Adminata\Exception\ModelManagerException;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\DoctrineORM\Model\ModelManager;
@@ -52,6 +47,11 @@ use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidBinaryEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
+use IDCT\Adminata\Exception\LockException;
+use IDCT\Adminata\Exception\ModelManagerException;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 final class ModelManagerTest extends TestCase

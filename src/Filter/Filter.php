@@ -15,9 +15,9 @@ namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\ORM\Query\Expr\Composite;
 use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Filter as BaseFilter;
 use IDCT\Adminata\Filter\Model\FilterData;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 abstract class Filter extends BaseFilter implements GroupableConditionAwareInterface
 {

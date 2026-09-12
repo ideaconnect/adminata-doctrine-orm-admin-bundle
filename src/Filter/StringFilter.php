@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\Operator\StringOperatorType;
 use IDCT\Adminata\Search\SearchableFilterInterface;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 final class StringFilter extends Filter implements SearchableFilterInterface
 {

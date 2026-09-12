@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Block;
 
-use SimpleThings\EntityAudit\AuditReader;
 use IDCT\Adminata\Block\BlockContextInterface;
 use IDCT\Adminata\Block\Service\AbstractBlockService;
+use SimpleThings\EntityAudit\AuditReader;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Twig\Environment;

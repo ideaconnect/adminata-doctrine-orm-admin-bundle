@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\DBAL\Types\Types;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\Operator\DateOperatorType;
 use IDCT\Adminata\Form\Type\Operator\DateRangeOperatorType;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 abstract class AbstractDateFilter extends Filter
 {

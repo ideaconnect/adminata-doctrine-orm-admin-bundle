@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
-use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Filter\Model\FilterData;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 

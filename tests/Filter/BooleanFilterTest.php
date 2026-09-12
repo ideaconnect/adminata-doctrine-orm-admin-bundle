@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use IDCT\Adminata\Filter\Model\FilterData;
-use IDCT\Adminata\Form\Type\BooleanType;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Filter\BooleanFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\BooleanType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 final class BooleanFilterTest extends FilterTestCase

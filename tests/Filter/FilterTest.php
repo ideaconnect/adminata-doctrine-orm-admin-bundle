@@ -15,11 +15,11 @@ namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query\Expr;
-use PHPUnit\Framework\Attributes\DataProvider;
-use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Filter\Filter;
 use IDCT\Adminata\DoctrineORM\Filter\StringFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 final class FilterTest extends FilterTestCase
 {

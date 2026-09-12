@@ -15,14 +15,14 @@ namespace IDCT\Adminata\DoctrineORM\Tests\Datagrid;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\ORM\Tools\SchemaTool;
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\Datagrid\Pager;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ORM\User;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ORM\UserBrowser;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 final class PagerTest extends TestCase
 {

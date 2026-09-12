@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Doctrine\ORM\EntityManager;
-use IDCT\Adminata\FieldDescription\TypeGuesserChain;
 use IDCT\Adminata\DoctrineORM\Builder\DatagridBuilder;
 use IDCT\Adminata\DoctrineORM\Builder\FormContractor;
 use IDCT\Adminata\DoctrineORM\Builder\ListBuilder;
@@ -24,6 +23,7 @@ use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescriptionFactory;
 use IDCT\Adminata\DoctrineORM\FieldDescription\FilterTypeGuesser;
 use IDCT\Adminata\DoctrineORM\FieldDescription\TypeGuesser;
 use IDCT\Adminata\DoctrineORM\Model\ModelManager;
+use IDCT\Adminata\FieldDescription\TypeGuesserChain;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->services()

@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use IDCT\Adminata\Filter\Model\FilterData;
-use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 
 final class ChoiceFilterTest extends FilterTestCase
 {

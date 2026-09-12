@@ -16,15 +16,15 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\PHPUnit;
 
+use IDCT\Adminata\DoctrineORM\Tests\App\AppKernel;
+use IDCT\Adminata\DoctrineORM\Tests\Support\ConsoleRunner;
+use IDCT\Adminata\DoctrineORM\Tests\Support\TestDatabase;
 use PHPUnit\Event\TestSuite\Loaded;
 use PHPUnit\Event\TestSuite\LoadedSubscriber;
 use PHPUnit\Runner\Extension\Extension;
 use PHPUnit\Runner\Extension\Facade;
 use PHPUnit\Runner\Extension\ParameterCollection;
 use PHPUnit\TextUI\Configuration\Configuration;
-use IDCT\Adminata\DoctrineORM\Tests\App\AppKernel;
-use IDCT\Adminata\DoctrineORM\Tests\Support\ConsoleRunner;
-use IDCT\Adminata\DoctrineORM\Tests\Support\TestDatabase;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**

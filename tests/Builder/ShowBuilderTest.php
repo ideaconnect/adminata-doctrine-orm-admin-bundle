@@ -14,16 +14,16 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Tests\Builder;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\DoctrineORM\Builder\ShowBuilder;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
+use IDCT\Adminata\FieldDescription\FieldDescriptionCollection;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
-use IDCT\Adminata\Admin\AdminInterface;
-use IDCT\Adminata\FieldDescription\FieldDescriptionCollection;
-use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
-use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
-use IDCT\Adminata\DoctrineORM\Builder\ShowBuilder;
-use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
 use Symfony\Component\Form\Guess\TypeGuess;
 
 /**

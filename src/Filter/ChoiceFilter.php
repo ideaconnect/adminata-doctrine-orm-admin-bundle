@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 final class ChoiceFilter extends Filter
 {

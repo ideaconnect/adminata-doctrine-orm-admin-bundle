@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection;
 
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Configuration;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\Definition\Exception\InvalidTypeException;
 use Symfony\Component\Config\Definition\Processor;

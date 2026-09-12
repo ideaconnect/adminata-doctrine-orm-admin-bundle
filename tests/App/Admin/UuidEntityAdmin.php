@@ -16,10 +16,10 @@ namespace IDCT\Adminata\DoctrineORM\Tests\App\Admin;
 use IDCT\Adminata\Admin\AbstractAdmin;
 use IDCT\Adminata\Datagrid\DatagridMapper;
 use IDCT\Adminata\Datagrid\ListMapper;
-use IDCT\Adminata\Form\FormMapper;
-use IDCT\Adminata\Show\ShowMapper;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Car;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\UuidEntity;
+use IDCT\Adminata\Form\FormMapper;
+use IDCT\Adminata\Show\ShowMapper;
 use Symfony\Component\Uid\Uuid;
 
 /**

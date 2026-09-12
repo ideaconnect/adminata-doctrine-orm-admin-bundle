@@ -15,9 +15,9 @@ namespace IDCT\Adminata\DoctrineORM\Exporter;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Exporter\DataSourceInterface;
 use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 final class DataSource implements DataSourceInterface
 {

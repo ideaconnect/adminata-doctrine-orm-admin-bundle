@@ -27,13 +27,13 @@ use Doctrine\ORM\UnitOfWork;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\Persistence\Mapping\MappingException;
 use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Exception\LockException;
 use IDCT\Adminata\Exception\ModelManagerException;
 use IDCT\Adminata\Model\LockInterface;
 use IDCT\Adminata\Model\ModelManagerInterface;
 use IDCT\Adminata\Model\ProxyResolverInterface;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
 
 /**

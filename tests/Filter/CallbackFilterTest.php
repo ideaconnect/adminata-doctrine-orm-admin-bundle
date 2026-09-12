@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\DoctrineORM\Filter\CallbackFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 final class CallbackFilterTest extends FilterTestCase

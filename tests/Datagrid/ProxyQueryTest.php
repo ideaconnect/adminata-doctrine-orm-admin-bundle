@@ -17,13 +17,13 @@ use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\Tools\SchemaTool;
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\UuidType;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\DoubleNameEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Query\FooWalker;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 final class ProxyQueryTest extends TestCase
 {

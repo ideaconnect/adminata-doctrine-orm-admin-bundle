@@ -17,8 +17,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Query\Expr;
 use Doctrine\ORM\QueryBuilder;
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use PHPUnit\Framework\TestCase;
 
 abstract class FilterTestCase extends TestCase
 {

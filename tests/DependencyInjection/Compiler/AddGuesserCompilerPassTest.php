@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection\Compiler;
 
-use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
-use IDCT\Adminata\FieldDescription\TypeGuesserChain;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddGuesserCompilerPass;
+use IDCT\Adminata\FieldDescription\TypeGuesserChain;
+use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;

@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Tests\FieldDescription;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
+use IDCT\Adminata\DoctrineORM\FieldDescription\TypeGuesser;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
-use IDCT\Adminata\DoctrineORM\FieldDescription\TypeGuesser;
 use Symfony\Component\Form\Guess\Guess;
 
 /**

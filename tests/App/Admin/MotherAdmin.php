@@ -15,9 +15,9 @@ namespace IDCT\Adminata\DoctrineORM\Tests\App\Admin;
 
 use IDCT\Adminata\Admin\AbstractAdmin;
 use IDCT\Adminata\Datagrid\ListMapper;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Mother;
 use IDCT\Adminata\Form\FormMapper;
 use IDCT\Adminata\Form\Type\CollectionType;
-use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Mother;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**

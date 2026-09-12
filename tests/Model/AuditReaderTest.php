@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Model;
 
+use IDCT\Adminata\DoctrineORM\Model\AuditReader;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
-use IDCT\Adminata\DoctrineORM\Model\AuditReader;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>

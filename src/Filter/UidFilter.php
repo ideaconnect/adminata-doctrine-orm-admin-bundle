@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\DBAL\Types\Types;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 use IDCT\Adminata\Search\SearchableFilterInterface;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Uid\AbstractUid;
 use Symfony\Component\Uid\Ulid;

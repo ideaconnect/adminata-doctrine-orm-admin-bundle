@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use PHPUnit\Framework\Attributes\DataProvider;
-use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Filter\DateRangeFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * @author Patrick Landolt <patrick.landolt@artack.ch>

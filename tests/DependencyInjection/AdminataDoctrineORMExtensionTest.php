@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection;
 
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\AdminataDoctrineORMExtension;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 final class AdminataDoctrineORMExtensionTest extends TestCase

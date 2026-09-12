@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Block;
 
+use IDCT\Adminata\Block\BlockContextInterface;
+use IDCT\Adminata\DoctrineORM\Block\AuditBlockService;
+use IDCT\Adminata\Model\Block;
+use IDCT\Adminata\Test\BlockServiceTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
 use SimpleThings\EntityAudit\Revision;
-use IDCT\Adminata\Block\BlockContextInterface;
-use IDCT\Adminata\Model\Block;
-use IDCT\Adminata\Test\BlockServiceTestCase;
-use IDCT\Adminata\DoctrineORM\Block\AuditBlockService;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>

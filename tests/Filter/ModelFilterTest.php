@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use IDCT\Adminata\Filter\Model\FilterData;
-use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 use IDCT\Adminata\DoctrineORM\Filter\ModelFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 
 final class ModelFilterTest extends FilterTestCase
 {

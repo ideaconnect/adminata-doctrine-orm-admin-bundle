@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\Common\Collections\Collection;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\ModelAutocompleteType;
 use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 /**
  * NEXT_MAJOR: Remove this filter.

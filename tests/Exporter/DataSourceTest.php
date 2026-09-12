@@ -17,10 +17,10 @@ use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
-use PHPUnit\Framework\TestCase;
-use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\DoctrineORM\Exporter\DataSource;
+use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
+use PHPUnit\Framework\TestCase;
 
 final class DataSourceTest extends TestCase
 {

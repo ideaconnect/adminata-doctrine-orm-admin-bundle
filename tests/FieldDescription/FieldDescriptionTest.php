@@ -14,13 +14,13 @@ declare(strict_types=1);
 namespace IDCT\Adminata\DoctrineORM\Tests\FieldDescription;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\Admin\AdminInterface;
-use IDCT\Adminata\Exception\NoValueException;
-use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
 use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Enum\Suit;
+use IDCT\Adminata\Exception\NoValueException;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 final class FieldDescriptionTest extends TestCase
 {

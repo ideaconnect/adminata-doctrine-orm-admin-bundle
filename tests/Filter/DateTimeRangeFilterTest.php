@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter;
 use IDCT\Adminata\Filter\Model\FilterData;
 use IDCT\Adminata\Form\Type\DateTimeRangeType;
 use IDCT\Adminata\Form\Type\Operator\DateRangeOperatorType;
-use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
-use IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>

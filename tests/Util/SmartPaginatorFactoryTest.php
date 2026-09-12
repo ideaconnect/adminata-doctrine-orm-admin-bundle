@@ -15,9 +15,6 @@ namespace IDCT\Adminata\DoctrineORM\Tests\Util;
 
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\CountWalker;
-use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
 use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Address;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Author;
@@ -25,6 +22,9 @@ use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Item;
 use IDCT\Adminata\DoctrineORM\Tests\App\Entity\ProductAttribute;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
 use IDCT\Adminata\DoctrineORM\Util\SmartPaginatorFactory;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 
 final class SmartPaginatorFactoryTest extends TestCase
 {

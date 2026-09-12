@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection\Compiler;
 
-use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
-use PHPUnit\Framework\Attributes\DataProvider;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Product;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\SimpleEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidEntity;
 use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity;
+use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 

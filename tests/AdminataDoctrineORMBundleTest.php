@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace IDCT\Adminata\DoctrineORM\Tests;
 
-use PHPUnit\Framework\TestCase;
+use IDCT\Adminata\DoctrineORM\AdminataDoctrineORMBundle;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddGuesserCompilerPass;
 use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddTemplatesCompilerPass;
-use IDCT\Adminata\DoctrineORM\AdminataDoctrineORMBundle;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
