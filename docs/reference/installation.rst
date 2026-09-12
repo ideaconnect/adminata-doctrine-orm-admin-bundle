@@ -10,14 +10,22 @@ As such, ``AdminataDoctrineORMBundle`` depends on ``AdminataBundle`` and will no
 .. note::
 
     These installation instructions are meant to be used only as part of AdminataBundle's installation process,
-    which is documented `here <https://docs.sonata-project.org/projects/AdminataBundle/en/3.x/getting_started/installation/>`_.
+    which is documented `here <https://github.com/ideaconnect/adminata/blob/main/docs/admin-bundle/getting_started/installation.rst>`_.
 
 Download the bundle
 -------------------
 
+This bundle is not on Packagist yet, so name the repository it installs from first:
+
+.. code-block:: json
+
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle.git" }
+    ]
+
 .. code-block:: bash
 
-    composer require sonata-project/doctrine-orm-admin-bundle
+    composer require idct/adminata-doctrine-orm-admin-bundle
 
 Enable the bundle
 -----------------
@@ -34,5 +42,5 @@ are not already enabled::
 
 .. note::
 
-    Don't forget that, as part of `AdminataBundle's installation instructions <https://docs.sonata-project.org/projects/AdminataBundle/en/3.x/getting_started/installation/>`_,
+    Don't forget that, as part of `AdminataBundle's installation instructions <https://github.com/ideaconnect/adminata/blob/main/docs/admin-bundle/getting_started/installation.rst>`_,
     you need to enable additional bundles on `bundles.php`.
