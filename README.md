@@ -12,24 +12,18 @@ becomes a list, a filter, a form, a show page and an export, on top of `idct/adm
 from 1.x or from upstream: [adminata's UPGRADE.md](https://github.com/ideaconnect/adminata/blob/main/UPGRADE.md)
 has the whole map, and [UPGRADE-2.0.md](UPGRADE-2.0.md) the rows that are this package's.
 
-> **Not on Packagist yet.** [`idct/adminata`](https://packagist.org/packages/idct/adminata) is
-> there, as `dev-main` until its 1.0 is tagged; this bundle is not, so name the repository it
-> installs from — a `vcs` one, or a `path` one for a checkout beside your project.
+[![Latest Stable Version](https://img.shields.io/packagist/v/idct/adminata-doctrine-orm-admin-bundle.svg?label=stable)](https://packagist.org/packages/idct/adminata-doctrine-orm-admin-bundle)
+[![License](https://img.shields.io/packagist/l/idct/adminata-doctrine-orm-admin-bundle.svg)](LICENSE)
 
 ## Installation
-
-```json
-"repositories": [
-    { "type": "vcs", "url": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle.git" }
-]
-```
 
 ```bash
 composer require idct/adminata:dev-main idct/adminata-doctrine-orm-admin-bundle
 ```
 
-The explicit `dev-main` is what lets a project with `minimum-stability: stable` take adminata from
-Packagist, where that branch is its only version so far.
+Both come from Packagist. The explicit `dev-main` is what lets a project with
+`minimum-stability: stable` take adminata, whose 1.0 is not tagged yet, so that branch is its only
+version there.
 
 Register the two bundles in `config/bundles.php`:
 

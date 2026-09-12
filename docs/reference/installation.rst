@@ -15,14 +15,6 @@ As such, ``AdminataDoctrineORMBundle`` depends on ``AdminataBundle`` and will no
 Download the bundle
 -------------------
 
-This bundle is not on Packagist yet, so name the repository it installs from first:
-
-.. code-block:: json
-
-    "repositories": [
-        { "type": "vcs", "url": "https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle.git" }
-    ]
-
 .. code-block:: bash
 
     composer require idct/adminata-doctrine-orm-admin-bundle
