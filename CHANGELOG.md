@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 2.0.0 - unreleased
+## [2.0.0](https://github.com/ideaconnect/adminata-doctrine-orm-admin-bundle/releases/tag/v2.0.0) - 2026-09-12
 
 The first release under adminata's own names. Everything up to commit `99749ce` speaks the
 Sonata names; nothing after it does.
