@@ -53,7 +53,11 @@ rector-fix: ## Rector, applying the changes
 	vendor/bin/rector process
 .PHONY: rector-fix
 
-qa: lint phpstan rector test ## Everything CI runs
+check-names: ## Nothing in this tree may still carry a Sonata name (adminata's engine, PLAN/v2 N20)
+	php vendor/idct/adminata/upstream/rename/apply.php --check .
+.PHONY: check-names
+
+qa: lint check-names phpstan rector test ## Everything CI runs
 .PHONY: qa
 
 docs: ## Build the documentation into var/docs (warnings are errors)

@@ -2,6 +2,28 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0 - unreleased
+
+The first release under adminata's own names. Everything up to commit `99749ce` speaks the
+Sonata names; nothing after it does.
+
+### Changed
+- The namespace is `IDCT\Adminata\DoctrineORM\` (tests: `IDCT\Adminata\DoctrineORM\Tests\`), the
+  bundle class `AdminataDoctrineORMBundle`, the container extension `AdminataDoctrineORMExtension`
+  with the configuration root `adminata_doctrine_orm`, the Twig namespace `@AdminataDoctrineORM`;
+  every service id and tag takes `adminata.` for `sonata.`, and every reference into adminata
+  follows adminata's rename (`IDCT\Adminata\`, `@Adminata`, `adminata_type_*`, …). The map, the
+  tool that applies it to an application and the one thing that is a data migration rather than
+  a rename: adminata's `UPGRADE.md`; this package's rows: `UPGRADE-2.0.md`.
+- `composer.json` no longer `replace`s `sonata-project/doctrine-orm-admin-bundle`; it `conflict`s
+  with it. The `sonata` keyword is gone.
+- Requires `idct/adminata` at the commit that carries the same rename.
+
+### Kept
+- The upstream copyright headers on every inherited file, `NOTICE`, `UPSTREAM.md` and this
+  changelog's upstream history.
+
+
 ## [4.21.0](https://github.com/sonata-project/SonataDoctrineORMAdminBundle/compare/4.20.0...4.21.0) - 2026-01-05
 ### Changed
 - [[#1858](https://github.com/sonata-project/SonataDoctrineORMAdminBundle/pull/1858)] The `symfony/security-acl` dependency is now optional. You need to explicitly require it as a dependency if you are using ACL. ([@dmaicher](https://github.com/dmaicher))

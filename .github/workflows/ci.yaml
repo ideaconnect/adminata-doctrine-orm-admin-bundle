@@ -118,6 +118,8 @@ jobs:
                       run: make rector
                     - tool: composer-normalize
                       run: composer normalize --dry-run
+                    - tool: check-names
+                      run: make check-names
 
         steps:
             - name: Checkout

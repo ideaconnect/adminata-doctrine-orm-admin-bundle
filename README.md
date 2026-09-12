@@ -3,11 +3,14 @@
 Doctrine ORM support for [adminata](https://github.com/ideaconnect/adminata) — the storage layer
 that turns a Doctrine entity into a list, a filter, a form, a show page and an export.
 
-This is a hard fork of `sonata-project/doctrine-orm-admin-bundle` 4.21.0. It `replace`s that
-package, keeps the `IDCT\Adminata\DoctrineORM\` namespace, the `AdminataDoctrineORMBundle`
-bundle class, the `adminata_doctrine_orm` configuration root and every service id, so an
-application's admin classes, service definitions and YAML carry over untouched. What changes is
-underneath: it is built against `idct/adminata` rather than the seven `sonata-project` packages.
+This is a hard fork of `sonata-project/doctrine-orm-admin-bundle` 4.21.0, and since 2.0 it no
+longer answers to that package's names: the namespace is `IDCT\Adminata\DoctrineORM\`, the bundle
+class `AdminataDoctrineORMBundle`, the configuration root `adminata_doctrine_orm`, the Twig
+namespace `@AdminataDoctrineORM`, and every service id starts with `adminata.`. It **conflicts**
+with the package it forked rather than replacing it. What it does is unchanged: a Doctrine entity
+becomes a list, a filter, a form, a show page and an export, on top of `idct/adminata`. Coming
+from 1.x or from upstream: [adminata's UPGRADE.md](https://github.com/ideaconnect/adminata/blob/main/UPGRADE.md)
+has the whole map, and [UPGRADE-2.0.md](UPGRADE-2.0.md) the rows that are this package's.
 
 > **Not on Packagist yet.** adminata and this bundle are released together; until then, install
 > them from a VCS or path repository.
@@ -36,14 +39,14 @@ Documentation: [`docs/`](docs), or `make docs` to build the site.
 | Layer | Package |
 |---|---|
 | Doctrine ORM | this one |
-| Doctrine MongoDB ODM | [`idct/sonata-admin-mongodb-bundle`](https://github.com/ideaconnect/sonata-admin-mongodb-bundle) |
+| Doctrine MongoDB ODM | [`idct/adminata-admin-mongodb-bundle`](https://github.com/ideaconnect/adminata-admin-mongodb-bundle) (7.0; 6.x is `idct/sonata-admin-mongodb-bundle`) |
 
 ## Development
 
 ```bash
 make install       # dependencies
 make services-up   # the MySQL the suite runs against
-make qa            # php-cs-fixer, PHPStan, Rector and PHPUnit
+make qa            # php-cs-fixer, PHPStan, Rector, PHPUnit and the names gate
 ```
 
 adminata supports MySQL, MariaDB and Percona; there is no SQLite support, so the suite needs a
