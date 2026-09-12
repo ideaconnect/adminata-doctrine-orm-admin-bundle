@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -31,10 +31,10 @@ final class AddAuditEntityCompilerPass implements CompilerPassInterface
 
         $auditedEntities = $container->getParameter('simplethings.entityaudit.audited_entities');
         \assert(\is_array($auditedEntities));
-        $force = $container->getParameter('sonata_doctrine_orm_admin.audit.force');
+        $force = $container->getParameter('adminata_doctrine_orm.audit.force');
         \assert(\is_bool($force));
 
-        foreach ($container->findTaggedServiceIds('sonata.admin') as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('adminata.admin') as $id => $attributes) {
             if ('orm' !== $attributes[0]['manager_type']) {
                 continue;
             }
@@ -57,8 +57,8 @@ final class AddAuditEntityCompilerPass implements CompilerPassInterface
 
         $container->setParameter('simplethings.entityaudit.audited_entities', $auditedEntities);
 
-        $auditManager = $container->getDefinition('sonata.admin.audit.manager');
-        $auditManager->addMethodCall('setReader', ['sonata.admin.audit.orm.reader', $auditedEntities]);
+        $auditManager = $container->getDefinition('adminata.admin.audit.manager');
+        $auditManager->addMethodCall('setReader', ['adminata.admin.audit.orm.reader', $auditedEntities]);
     }
 
     private function getModelName(ContainerBuilder $container, string $name): string

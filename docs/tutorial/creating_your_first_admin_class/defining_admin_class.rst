@@ -18,12 +18,12 @@ First, you need to create an `Admin/PostAdmin.php` file::
 
     namespace Tutorial\BlogBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Datagrid\ListMapper;
-    use Sonata\AdminBundle\Form\Type\ModelType;
-    use Sonata\AdminBundle\Show\ShowMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Datagrid\ListMapper;
+    use IDCT\Adminata\Form\Type\ModelType;
+    use IDCT\Adminata\Show\ShowMapper;
 
     use Knp\Menu\ItemInterface as MenuItemInterface;
 
@@ -100,7 +100,7 @@ Second, register the `PostAdmin` class inside the DIC in your config file:
             class: Tutorial\BlogBundle\Admin\PostAdmin
             arguments: [~, Tutorial\BlogBundle\Entity\Post, TutorialBlogBundle:PostAdmin]
             tags:
-                - { name: sonata.admin, manager_type: orm, group: tutorial_blog, label: 'Post' }
+                - { name: adminata.admin, manager_type: orm, group: tutorial_blog, label: 'Post' }
 
 These is the minimal configuration required to display the entity inside the dashboard and interact with the CRUD interface.
 Following this however, you will need to create an `Admin Controller`.
@@ -119,10 +119,10 @@ Tweak the TagAdmin class
 
     namespace Tutorial\BlogBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\ListMapper;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Form\FormMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\ListMapper;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Form\FormMapper;
 
     use Tutorial\BlogBundle\Entity\Tag;
 
@@ -161,7 +161,7 @@ And register the `TagAdmin` class inside the DIC in your config file:
             class: Tutorial\BlogBundle\Admin\TagAdmin
             arguments: [~, Tutorial\BlogBundle\Entity\Tag, TutorialBlogBundle:TagAdmin]
             tags:
-                - { name: sonata.admin, manager_type: orm, group: tutorial_blog, label: 'Tag' }
+                - { name: adminata.admin, manager_type: orm, group: tutorial_blog, label: 'Tag' }
 
 Tweak the CommentAdmin class
 ----------------------------
@@ -172,11 +172,11 @@ Tweak the CommentAdmin class
 
     namespace Tutorial\BlogBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Form\Type\ModelType;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Datagrid\ListMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Form\Type\ModelType;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Datagrid\ListMapper;
 
     use Application\Sonata\NewsBundle\Entity\Comment;
 
@@ -244,4 +244,4 @@ And register the `TagAdmin` class inside the DIC in your config file:
             class: Tutorial\BlogBundle\Admin\CommentAdmin
             arguments: [, Tutorial\BlogBundle\Entity\Comment, TutorialBlogBundle:CommentAdmin]
             tags:
-                - { name: sonata.admin, manager_type: orm, group: tutorial_blog, label: 'Comment' }
+                - { name: adminata.admin, manager_type: orm, group: tutorial_blog, label: 'Comment' }

@@ -14,7 +14,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Support;
+namespace IDCT\Adminata\DoctrineORM\Tests\Support;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;

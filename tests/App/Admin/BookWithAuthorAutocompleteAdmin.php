@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\Admin;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\Admin;
 
-use Sonata\AdminBundle\Admin\AbstractAdmin;
-use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Book;
+use IDCT\Adminata\Admin\AbstractAdmin;
+use IDCT\Adminata\Form\FormMapper;
+use IDCT\Adminata\Form\Type\ModelAutocompleteType;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Book;
 
 /**
  * @phpstan-extends AbstractAdmin<Book>

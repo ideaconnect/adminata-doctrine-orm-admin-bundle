@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Model;
+namespace IDCT\Adminata\DoctrineORM\Tests\Model;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
-use Sonata\DoctrineORMAdminBundle\Model\AuditReader;
+use IDCT\Adminata\DoctrineORM\Model\AuditReader;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>

@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Child;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Mother;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Child;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Mother;
 
 final class MotherFixtures extends Fixture implements FixtureInterface
 {

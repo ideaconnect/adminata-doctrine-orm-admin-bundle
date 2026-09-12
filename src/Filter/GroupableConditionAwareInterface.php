@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\ORM\Query\Expr\Composite;
-use Sonata\AdminBundle\Search\ChainableFilterInterface;
+use IDCT\Adminata\Search\ChainableFilterInterface;
 
 /**
  * @author Javier Spagnoletti <phansys@gmail.com>

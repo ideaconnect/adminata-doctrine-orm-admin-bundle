@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity;
 
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
 
 final class UuidEntity
 {

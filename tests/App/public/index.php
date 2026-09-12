@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-use Sonata\DoctrineORMAdminBundle\Tests\App\AppKernel;
+use IDCT\Adminata\DoctrineORM\Tests\App\AppKernel;
 use Symfony\Component\HttpFoundation\Request;
 
 // Running from this package: vendor/ is three levels up. Running from adminata, where the

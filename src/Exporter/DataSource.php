@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Exporter;
+namespace IDCT\Adminata\DoctrineORM\Exporter;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Sonata\AdminBundle\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
-use Sonata\AdminBundle\Exporter\DataSourceInterface;
-use Sonata\AdminBundle\Exporter\Source\DoctrineORMQuerySourceIterator;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\Exporter\DataSourceInterface;
+use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 final class DataSource implements DataSourceInterface
 {

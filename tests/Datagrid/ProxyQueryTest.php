@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Datagrid;
+namespace IDCT\Adminata\DoctrineORM\Tests\Datagrid;
 
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManagerInterface;
@@ -19,11 +19,11 @@ use Doctrine\ORM\Query;
 use Doctrine\ORM\Tools\SchemaTool;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\UuidType;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\DoubleNameEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Query\FooWalker;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\TestEntityManagerFactory;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\UuidType;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\DoubleNameEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Query\FooWalker;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
 
 final class ProxyQueryTest extends TestCase
 {

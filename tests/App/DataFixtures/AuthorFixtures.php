@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Address;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Author;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Address;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Author;
 
 final class AuthorFixtures extends Fixture
 {

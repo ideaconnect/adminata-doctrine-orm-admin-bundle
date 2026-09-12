@@ -10,13 +10,13 @@ These fields are displayed inside the filter box. They allow you to filter the l
 
 A filter instance is always linked to a Form Type, there are 7 types available:
 
-* `Sonata\AdminBundle\Form\Type\Filter\NumberType`: display 2 widgets, the operator ( >, >=, <=, <, =) and the value,
-* `Sonata\AdminBundle\Form\Type\Filter\ChoiceType`: display 2 widgets, the operator (yes and no) and the value,
-* `Sonata\AdminBundle\Form\Type\Filter\DefaultType`: display 2 widgets, an hidden operator (can be changed on demand) and the value,
-* `Sonata\AdminBundle\Form\Type\Filter\DateType`: display 2 widgets, the operator ( >, >=, <= , <, =) and the value,
-* `Sonata\AdminBundle\Form\Type\Filter\DateRangeType`: display 3 widgets, the operator (between and not between) and the two values,
-* `Sonata\AdminBundle\Form\Type\Filter\DateTimeType`: display 2 widgets, the operator ( >, >=, <= , <, =) and the value,
-* `Sonata\AdminBundle\Form\Type\Filter\DateTimeRangeType`: display 3 widgets, the operator (between and not between) and the two values,
+* `IDCT\Adminata\Form\Type\Filter\NumberType`: display 2 widgets, the operator ( >, >=, <=, <, =) and the value,
+* `IDCT\Adminata\Form\Type\Filter\ChoiceType`: display 2 widgets, the operator (yes and no) and the value,
+* `IDCT\Adminata\Form\Type\Filter\DefaultType`: display 2 widgets, an hidden operator (can be changed on demand) and the value,
+* `IDCT\Adminata\Form\Type\Filter\DateType`: display 2 widgets, the operator ( >, >=, <= , <, =) and the value,
+* `IDCT\Adminata\Form\Type\Filter\DateRangeType`: display 3 widgets, the operator (between and not between) and the two values,
+* `IDCT\Adminata\Form\Type\Filter\DateTimeType`: display 2 widgets, the operator ( >, >=, <= , <, =) and the value,
+* `IDCT\Adminata\Form\Type\Filter\DateTimeRangeType`: display 3 widgets, the operator (between and not between) and the two values,
 
 The `Form Type` configuration is provided by the filter itself.
 But they can be tweaked in the ``configureDatagridFilters`` process with the ``add`` method.
@@ -34,21 +34,21 @@ Available filter types
 
 For now, only `Doctrine ORM` filters are available:
 
-* ``Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DefaultType`` Form Type, renders yes or no field,
-* ``Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DefaultType`` Form Type, types can be configured as needed,
-* ``Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\ChoiceType`` Form Type,
-* ``Sonata\DoctrineORMAdminBundle\Filter\CountFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\NumberType`` Form Type,
-* ``Sonata\DoctrineORMAdminBundle\Filter\NumberFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\NumberType`` Form Type,
-* ``Sonata\DoctrineORMAdminBundle\Filter\ModelAutocompleteFilter``: uses ``Sonata\AdminBundle\Form\Type\Filter\ModelAutocompleteType`` form type, can be used as replacement of ``Sonata\DoctrineORMAdminBundle\Filter\ModelFilter`` to handle too many items that cannot be loaded into memory.
-* ``Sonata\DoctrineORMAdminBundle\Filter\StringFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\ChoiceType`` Form Type,
-* ``Sonata\DoctrineORMAdminBundle\Filter\StringListFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\ChoiceType`` Form Type,
-* ``Sonata\DoctrineORMAdminBundle\Filter\DateFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DateType`` Form Type, renders a date field,
-* ``Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DateRangeType`` Form Type, renders a 2 date fields,
-* ``Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DateTimeType`` Form Type, renders a datetime field,
-* ``Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DateTimeRangeType`` Form Type, renders a 2 datetime fields,
-* ``Sonata\DoctrineORMAdminBundle\Filter\ClassFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
-* ``Sonata\DoctrineORMAdminBundle\Filter\NullFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
-* ``Sonata\DoctrineORMAdminBundle\Filter\EmptyFilter``: depends on the ``Sonata\AdminBundle\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
+* ``IDCT\Adminata\DoctrineORM\Filter\BooleanFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DefaultType`` Form Type, renders yes or no field,
+* ``IDCT\Adminata\DoctrineORM\Filter\CallbackFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DefaultType`` Form Type, types can be configured as needed,
+* ``IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\ChoiceType`` Form Type,
+* ``IDCT\Adminata\DoctrineORM\Filter\CountFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\NumberType`` Form Type,
+* ``IDCT\Adminata\DoctrineORM\Filter\NumberFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\NumberType`` Form Type,
+* ``IDCT\Adminata\DoctrineORM\Filter\ModelAutocompleteFilter``: uses ``IDCT\Adminata\Form\Type\Filter\ModelAutocompleteType`` form type, can be used as replacement of ``IDCT\Adminata\DoctrineORM\Filter\ModelFilter`` to handle too many items that cannot be loaded into memory.
+* ``IDCT\Adminata\DoctrineORM\Filter\StringFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\ChoiceType`` Form Type,
+* ``IDCT\Adminata\DoctrineORM\Filter\StringListFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\ChoiceType`` Form Type,
+* ``IDCT\Adminata\DoctrineORM\Filter\DateFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DateType`` Form Type, renders a date field,
+* ``IDCT\Adminata\DoctrineORM\Filter\DateRangeFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DateRangeType`` Form Type, renders a 2 date fields,
+* ``IDCT\Adminata\DoctrineORM\Filter\DateTimeFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DateTimeType`` Form Type, renders a datetime field,
+* ``IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DateTimeRangeType`` Form Type, renders a 2 datetime fields,
+* ``IDCT\Adminata\DoctrineORM\Filter\ClassFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
+* ``IDCT\Adminata\DoctrineORM\Filter\NullFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
+* ``IDCT\Adminata\DoctrineORM\Filter\EmptyFilter``: depends on the ``IDCT\Adminata\Form\Type\Filter\DefaultType`` Form type, renders a choice list field.
 
 Example
 -------
@@ -57,8 +57,8 @@ Example
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -88,7 +88,7 @@ The string filter has additional options:
 
 * ``force_case_insensitivity`` - set to ``true`` to make the search case insensitive. By default ``false`` is used,
   letting the database to apply its default behavior.
-* ``trim`` - use one of ``Sonata\DoctrineORMAdminBundle\Filter\TRIM_*`` constants to control the clearing of blank spaces around in the value. By default ``Sonata\DoctrineORMAdminBundle\Filter\TRIM_BOTH`` is used.
+* ``trim`` - use one of ``IDCT\Adminata\DoctrineORM\Filter\TRIM_*`` constants to control the clearing of blank spaces around in the value. By default ``IDCT\Adminata\DoctrineORM\Filter\TRIM_BOTH`` is used.
 * ``allow_empty`` - set to ``true`` to enable search by empty value. By default ``false`` is used.
 * ``global_search`` - set to ``true`` to enable the use of this filter in the global search. By default ``true`` is used.
 
@@ -153,11 +153,11 @@ The new filter can be created from the basic ``Filter`` class::
 
     namespace App\Filter;
 
-    use Sonata\AdminBundle\Filter\Model\FilterData;
-    use Sonata\AdminBundle\Form\Type\Filter\ChoiceType;
-    use Sonata\AdminBundle\Form\Type\Operator\ContainsOperatorType;
-    use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-    use Sonata\DoctrineORMAdminBundle\Filter\Filter;
+    use IDCT\Adminata\Filter\Model\FilterData;
+    use IDCT\Adminata\Form\Type\Filter\ChoiceType;
+    use IDCT\Adminata\Form\Type\Operator\ContainsOperatorType;
+    use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+    use IDCT\Adminata\DoctrineORM\Filter\Filter;
 
     final class JsonListFilter extends Filter
     {
@@ -213,14 +213,14 @@ Lastly you need to enable the newly created filter:
 
     App\Filter\JsonListFilter:
         tags:
-            - { name: sonata.admin.filter.type }
+            - { name: adminata.admin.filter.type }
 
 ModelAutocompleteFilter
 -----------------------
 
-This filter type uses ``Sonata\AdminBundle\Form\Type\ModelAutocompleteType`` form type. It renders an input with select2 autocomplete feature.
-Can be used as replacement of ``Sonata\DoctrineORMAdminBundle\Filter\ModelFilter`` to handle too many related items that cannot be loaded into memory.
-This form type requires ``property`` option. See documentation of ``Sonata\AdminBundle\Form\Type\ModelAutocompleteType`` for all available options for this form type::
+This filter type uses ``IDCT\Adminata\Form\Type\ModelAutocompleteType`` form type. It renders an input with select2 autocomplete feature.
+Can be used as replacement of ``IDCT\Adminata\DoctrineORM\Filter\ModelFilter`` to handle too many related items that cannot be loaded into memory.
+This form type requires ``property`` option. See documentation of ``IDCT\Adminata\Form\Type\ModelAutocompleteType`` for all available options for this form type::
 
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
@@ -234,7 +234,7 @@ This form type requires ``property`` option. See documentation of ``Sonata\Admin
 DateRangeFilter
 ---------------
 
-The ``Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter`` filter renders two fields to filter all records between two dates.
+The ``IDCT\Adminata\DoctrineORM\Filter\DateRangeFilter`` filter renders two fields to filter all records between two dates.
 If only one date is set it will filter for all records until or since the given date::
 
     protected function configureDatagridFilters(DatagridMapper $filter): void
@@ -245,14 +245,14 @@ If only one date is set it will filter for all records until or since the given 
 Timestamps
 ----------
 
-``Sonata\DoctrineORMAdminBundle\Filter\DateFilter``, ``Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter``, ``Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter`` and ``Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter``
+``IDCT\Adminata\DoctrineORM\Filter\DateFilter``, ``IDCT\Adminata\DoctrineORM\Filter\DateRangeFilter``, ``IDCT\Adminata\DoctrineORM\Filter\DateTimeFilter`` and ``IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter``
 support filtering of timestamp fields by specifying ``'input_type' => 'timestamp'`` option::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -266,13 +266,13 @@ support filtering of timestamp fields by specifying ``'input_type' => 'timestamp
 ClassFilter
 -----------
 
-``Sonata\DoctrineORMAdminBundle\Filter\ClassFilter`` supports filtering on hierarchical entities. You need to specify the ``sub_classes`` option::
+``IDCT\Adminata\DoctrineORM\Filter\ClassFilter`` supports filtering on hierarchical entities. You need to specify the ``sub_classes`` option::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\DoctrineORMAdminBundle\Filter\ClassFilter;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\DoctrineORM\Filter\ClassFilter;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -286,13 +286,13 @@ ClassFilter
 NullFilter
 ----------
 
-``Sonata\DoctrineORMAdminBundle\Filter\NullFilter`` supports filtering for null entity fields::
+``IDCT\Adminata\DoctrineORM\Filter\NullFilter`` supports filtering for null entity fields::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Filter\NullFilter;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Filter\NullFilter;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -308,13 +308,13 @@ The ``inverse`` option can be used to filter values that are not null.
 EmptyFilter
 -----------
 
-``Sonata\DoctrineORMAdminBundle\Filter\EmptyFilter`` supports filtering for empty OneToMany relations::
+``IDCT\Adminata\DoctrineORM\Filter\EmptyFilter`` supports filtering for empty OneToMany relations::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Filter\NullFilter;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Filter\NullFilter;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -330,14 +330,14 @@ The ``inverse`` option can be used to filter values that are not empty.
 ChoiceFilter
 ------------
 
-``Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter`` supports filtering for custom values::
+``IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter`` supports filtering for custom values::
 
     // src/Admin/BlogPostAdmin.php
 
     namespace App\Admin;
 
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter;
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
     final class BlogPostAdmin extends AbstractAdmin
@@ -371,8 +371,8 @@ If you need to filter your base entities by the value of a sub entity property, 
 
     namespace App\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
 
     final class UserAdmin extends AbstractAdmin
     {
@@ -418,11 +418,11 @@ callable syntax::
     namespace Sonata\NewsBundle\Admin;
 
     use Application\Sonata\NewsBundle\Entity\Comment;
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Datagrid\DatagridMapper;
-    use Sonata\AdminBundle\Filter\Model\FilterData;
-    use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-    use Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Datagrid\DatagridMapper;
+    use IDCT\Adminata\Filter\Model\FilterData;
+    use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+    use IDCT\Adminata\DoctrineORM\Filter\CallbackFilter;
     use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
     final class PostAdmin extends AbstractAdmin

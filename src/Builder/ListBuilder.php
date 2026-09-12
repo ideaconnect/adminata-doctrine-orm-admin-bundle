@@ -11,14 +11,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Builder;
+namespace IDCT\Adminata\DoctrineORM\Builder;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Sonata\AdminBundle\Builder\ListBuilderInterface;
-use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionCollection;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserInterface;
+use IDCT\Adminata\Builder\ListBuilderInterface;
+use IDCT\Adminata\Datagrid\ListMapper;
+use IDCT\Adminata\FieldDescription\FieldDescriptionCollection;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
 
 final class ListBuilder implements ListBuilderInterface
 {
@@ -95,25 +95,25 @@ final class ListBuilder implements ListBuilderInterface
                 switch ($fieldDescription->getMappingType()) {
                     case ClassMetadata::MANY_TO_ONE:
                         $fieldDescription->setTemplate(
-                            '@SonataAdmin/CRUD/Association/list_many_to_one.html.twig'
+                            '@Adminata/CRUD/Association/list_many_to_one.html.twig'
                         );
 
                         break;
                     case ClassMetadata::ONE_TO_ONE:
                         $fieldDescription->setTemplate(
-                            '@SonataAdmin/CRUD/Association/list_one_to_one.html.twig'
+                            '@Adminata/CRUD/Association/list_one_to_one.html.twig'
                         );
 
                         break;
                     case ClassMetadata::ONE_TO_MANY:
                         $fieldDescription->setTemplate(
-                            '@SonataAdmin/CRUD/Association/list_one_to_many.html.twig'
+                            '@Adminata/CRUD/Association/list_one_to_many.html.twig'
                         );
 
                         break;
                     case ClassMetadata::MANY_TO_MANY:
                         $fieldDescription->setTemplate(
-                            '@SonataAdmin/CRUD/Association/list_many_to_many.html.twig'
+                            '@Adminata/CRUD/Association/list_many_to_many.html.twig'
                         );
 
                         break;
@@ -129,14 +129,14 @@ final class ListBuilder implements ListBuilderInterface
     private function buildActionFieldDescription(FieldDescriptionInterface $fieldDescription): FieldDescriptionInterface
     {
         if (null === $fieldDescription->getTemplate()) {
-            $fieldDescription->setTemplate('@SonataAdmin/CRUD/list__action.html.twig');
+            $fieldDescription->setTemplate('@Adminata/CRUD/list__action.html.twig');
         }
 
         if (null !== $fieldDescription->getOption('actions')) {
             $actions = $fieldDescription->getOption('actions');
             foreach ($actions as $k => $action) {
                 if (!isset($action['template'])) {
-                    $actions[$k]['template'] = \sprintf('@SonataAdmin/CRUD/list__action_%s.html.twig', $k);
+                    $actions[$k]['template'] = \sprintf('@Adminata/CRUD/list__action_%s.html.twig', $k);
                 }
             }
 

@@ -11,14 +11,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Car;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\UlidChildEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\UuidEntity;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Car;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\UlidChildEntity;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\UuidEntity;
 use Symfony\Component\Uid\Uuid;
 
 final class UuidEntityFixtures extends Fixture implements DependentFixtureInterface

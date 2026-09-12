@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\FieldDescription;
+namespace IDCT\Adminata\DoctrineORM\Tests\FieldDescription;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\TypeGuesser;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\DoctrineORM\FieldDescription\TypeGuesser;
 use Symfony\Component\Form\Guess\Guess;
 
 /**

@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -26,15 +26,15 @@ final class AddTemplatesCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container): void
     {
-        foreach ($container->findTaggedServiceIds('sonata.admin') as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('adminata.admin') as $id => $attributes) {
             if (!isset($attributes[0]['manager_type']) || 'orm' !== $attributes[0]['manager_type']) {
                 continue;
             }
 
             $definition = $container->getDefinition($id);
 
-            $this->mergeMethodCall($definition, 'setFormTheme', ['@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig']);
-            $this->mergeMethodCall($definition, 'setFilterTheme', ['@SonataDoctrineORMAdmin/Form/filter_admin_fields.html.twig']);
+            $this->mergeMethodCall($definition, 'setFormTheme', ['@AdminataDoctrineORM/Form/form_admin_fields.html.twig']);
+            $this->mergeMethodCall($definition, 'setFilterTheme', ['@AdminataDoctrineORM/Form/filter_admin_fields.html.twig']);
         }
     }
 

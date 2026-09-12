@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Datagrid;
+namespace IDCT\Adminata\DoctrineORM\Datagrid;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
@@ -20,8 +20,8 @@ use Doctrine\ORM\Query;
 use Doctrine\ORM\Query\Expr\Join;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\Paginator;
-use Sonata\AdminBundle\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Util\SmartPaginatorFactory;
+use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Util\SmartPaginatorFactory;
 
 /**
  * This class try to unify the query usage with Doctrine.

@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\ORM\Query\Expr\Composite;
-use Sonata\AdminBundle\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
-use Sonata\AdminBundle\Filter\Filter as BaseFilter;
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\Filter\Filter as BaseFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 abstract class Filter extends BaseFilter implements GroupableConditionAwareInterface
 {

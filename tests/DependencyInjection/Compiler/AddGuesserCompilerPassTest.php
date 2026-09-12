@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection\Compiler;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserChain;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddGuesserCompilerPass;
+use IDCT\Adminata\FieldDescription\TypeGuesserChain;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddGuesserCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
@@ -26,32 +26,32 @@ final class AddGuesserCompilerPassTest extends AbstractCompilerPassTestCase
     {
         $guesser = new Definition(TypeGuesserChain::class);
         $guesser->setArgument(0, []);
-        $this->setDefinition('sonata.admin.guesser.orm_list_chain', $guesser);
-        $this->setDefinition('sonata.admin.guesser.orm_datagrid_chain', $guesser);
-        $this->setDefinition('sonata.admin.guesser.orm_show_chain', $guesser);
+        $this->setDefinition('adminata.admin.guesser.orm_list_chain', $guesser);
+        $this->setDefinition('adminata.admin.guesser.orm_datagrid_chain', $guesser);
+        $this->setDefinition('adminata.admin.guesser.orm_show_chain', $guesser);
 
         $tagged = new Definition();
-        $tagged->addTag('sonata.admin.guesser.orm_list');
-        $tagged->addTag('sonata.admin.guesser.orm_datagrid');
-        $tagged->addTag('sonata.admin.guesser.orm_show');
+        $tagged->addTag('adminata.admin.guesser.orm_list');
+        $tagged->addTag('adminata.admin.guesser.orm_datagrid');
+        $tagged->addTag('adminata.admin.guesser.orm_show');
         $this->setDefinition('random_service', $tagged);
 
         $this->compile();
 
         static::assertContainerBuilderHasServiceDefinitionWithArgument(
-            'sonata.admin.guesser.orm_list_chain',
+            'adminata.admin.guesser.orm_list_chain',
             0,
             [new Reference('random_service')]
         );
 
         static::assertContainerBuilderHasServiceDefinitionWithArgument(
-            'sonata.admin.guesser.orm_datagrid_chain',
+            'adminata.admin.guesser.orm_datagrid_chain',
             0,
             [new Reference('random_service')]
         );
 
         static::assertContainerBuilderHasServiceDefinitionWithArgument(
-            'sonata.admin.guesser.orm_show_chain',
+            'adminata.admin.guesser.orm_show_chain',
             0,
             [new Reference('random_service')]
         );

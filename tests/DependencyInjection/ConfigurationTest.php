@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\DependencyInjection;
+namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection;
 
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Configuration;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Configuration;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\Definition\Exception\InvalidTypeException;
 use Symfony\Component\Config\Definition\Processor;

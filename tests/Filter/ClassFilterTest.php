@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Filter;
+namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\Operator\EqualOperatorType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Filter\ClassFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Filter\ClassFilter;
 
 final class ClassFilterTest extends FilterTestCase
 {

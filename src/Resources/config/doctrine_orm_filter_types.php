@@ -13,82 +13,82 @@ declare(strict_types=1);
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ClassFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\CountFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateRangeFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\EmptyFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelAutocompleteFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\NullFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\NumberFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\StringFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\StringListFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\TimeFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\UidFilter;
+use IDCT\Adminata\DoctrineORM\Filter\BooleanFilter;
+use IDCT\Adminata\DoctrineORM\Filter\CallbackFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ClassFilter;
+use IDCT\Adminata\DoctrineORM\Filter\CountFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateRangeFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateTimeFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter;
+use IDCT\Adminata\DoctrineORM\Filter\EmptyFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ModelAutocompleteFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ModelFilter;
+use IDCT\Adminata\DoctrineORM\Filter\NullFilter;
+use IDCT\Adminata\DoctrineORM\Filter\NumberFilter;
+use IDCT\Adminata\DoctrineORM\Filter\StringFilter;
+use IDCT\Adminata\DoctrineORM\Filter\StringListFilter;
+use IDCT\Adminata\DoctrineORM\Filter\TimeFilter;
+use IDCT\Adminata\DoctrineORM\Filter\UidFilter;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->services()
 
-        ->set('sonata.admin.orm.filter.type.boolean', BooleanFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_boolean'])
+        ->set('adminata.admin.orm.filter.type.boolean', BooleanFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_boolean'])
 
-        ->set('sonata.admin.orm.filter.type.callback', CallbackFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_callback'])
+        ->set('adminata.admin.orm.filter.type.callback', CallbackFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_callback'])
 
-        ->set('sonata.admin.orm.filter.type.choice', ChoiceFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_choice'])
+        ->set('adminata.admin.orm.filter.type.choice', ChoiceFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_choice'])
 
-        ->set('sonata.admin.orm.filter.type.class', ClassFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_class'])
+        ->set('adminata.admin.orm.filter.type.class', ClassFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_class'])
 
-        ->set('sonata.admin.orm.filter.type.count', CountFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_count'])
+        ->set('adminata.admin.orm.filter.type.count', CountFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_count'])
 
-        ->set('sonata.admin.orm.filter.type.date', DateFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_date'])
+        ->set('adminata.admin.orm.filter.type.date', DateFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_date'])
 
-        ->set('sonata.admin.orm.filter.type.date_range', DateRangeFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_date_range'])
+        ->set('adminata.admin.orm.filter.type.date_range', DateRangeFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_date_range'])
 
-        ->set('sonata.admin.orm.filter.type.datetime', DateTimeFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_datetime'])
+        ->set('adminata.admin.orm.filter.type.datetime', DateTimeFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_datetime'])
 
-        ->set('sonata.admin.orm.filter.type.datetime_range', DateTimeRangeFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_datetime_range'])
+        ->set('adminata.admin.orm.filter.type.datetime_range', DateTimeRangeFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_datetime_range'])
 
-        ->set('sonata.admin.orm.filter.type.empty', EmptyFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_empty'])
+        ->set('adminata.admin.orm.filter.type.empty', EmptyFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_empty'])
 
-        ->set('sonata.admin.orm.filter.type.model', ModelFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_model'])
+        ->set('adminata.admin.orm.filter.type.model', ModelFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_model'])
 
-        ->set('sonata.admin.orm.filter.type.null', NullFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_null'])
+        ->set('adminata.admin.orm.filter.type.null', NullFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_null'])
 
-        ->set('sonata.admin.orm.filter.type.number', NumberFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_number'])
+        ->set('adminata.admin.orm.filter.type.number', NumberFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_number'])
 
-        ->set('sonata.admin.orm.filter.type.string', StringFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_string'])
+        ->set('adminata.admin.orm.filter.type.string', StringFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_string'])
 
-        ->set('sonata.admin.orm.filter.type.string_list', StringListFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_string_list'])
+        ->set('adminata.admin.orm.filter.type.string_list', StringListFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_string_list'])
 
-        ->set('sonata.admin.orm.filter.type.time', TimeFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_time'])
+        ->set('adminata.admin.orm.filter.type.time', TimeFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_time'])
 
-        ->set('sonata.admin.orm.filter.type.uid', UidFilter::class)
-            ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_uid']);
+        ->set('adminata.admin.orm.filter.type.uid', UidFilter::class)
+            ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_uid']);
 
     /*
      * NEXT_MAJOR: Remove this service definition.
      */
-    $containerConfigurator->services()->set('sonata.admin.orm.filter.type.model_autocomplete', ModelAutocompleteFilter::class)
-        ->tag('sonata.admin.filter.type', ['alias' => 'doctrine_orm_model_autocomplete']);
+    $containerConfigurator->services()->set('adminata.admin.orm.filter.type.model_autocomplete', ModelAutocompleteFilter::class)
+        ->tag('adminata.admin.filter.type', ['alias' => 'doctrine_orm_model_autocomplete']);
 };

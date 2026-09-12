@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ProductId;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ProductId;
 
 final class ProductIdType extends Type
 {

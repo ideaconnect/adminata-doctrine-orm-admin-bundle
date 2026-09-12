@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\Admin;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\Admin;
 
-use Sonata\AdminBundle\Admin\AbstractAdmin;
-use Sonata\AdminBundle\Datagrid\DatagridMapper;
-use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface as ORMProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Author;
+use IDCT\Adminata\Admin\AbstractAdmin;
+use IDCT\Adminata\Datagrid\DatagridMapper;
+use IDCT\Adminata\Datagrid\ListMapper;
+use IDCT\Adminata\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\Form\FormMapper;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface as ORMProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Author;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 /**

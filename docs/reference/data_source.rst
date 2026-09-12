@@ -9,14 +9,14 @@ This is done by calling convenience methods like ``setDateTimeFormat()`` and ``u
 
 Here's one way to do it:
 
-1. Decorate the default Sonata\DoctrineORMAdminBundle\Exporter\DataSource with your own and calls there.::
+1. Decorate the default IDCT\Adminata\DoctrineORM\Exporter\DataSource with your own and calls there.::
 
       namespace App\Service\Admin;
 
-      use Sonata\AdminBundle\Datagrid\ProxyQueryInterface;
-      use Sonata\AdminBundle\Exporter\DataSourceInterface;
-      use Sonata\DoctrineORMAdminBundle\Exporter\DataSource;
-      use Sonata\AdminBundle\Exporter\Source\DoctrineORMQuerySourceIterator;
+      use IDCT\Adminata\Datagrid\ProxyQueryInterface;
+      use IDCT\Adminata\Exporter\DataSourceInterface;
+      use IDCT\Adminata\DoctrineORM\Exporter\DataSource;
+      use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
 
       class DecoratingDataSource implements DataSourceInterface
       {
@@ -45,4 +45,4 @@ Here's one way to do it:
       services:
           ...
           App\Service\Admin\DecoratingDataSource:
-              decorates: 'sonata.admin.data_source.orm'
+              decorates: 'adminata.admin.data_source.orm'

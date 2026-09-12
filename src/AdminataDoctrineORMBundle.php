@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle;
+namespace IDCT\Adminata\DoctrineORM;
 
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddGuesserCompilerPass;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddTemplatesCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddGuesserCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddTemplatesCompilerPass;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class SonataDoctrineORMAdminBundle extends Bundle
+final class AdminataDoctrineORMBundle extends Bundle
 {
     public function build(ContainerBuilder $container): void
     {

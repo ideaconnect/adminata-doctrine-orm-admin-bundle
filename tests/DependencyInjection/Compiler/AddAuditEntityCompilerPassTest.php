@@ -11,15 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection\Compiler;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\Product;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\SimpleEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\UuidEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\VersionedEntity;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Product;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\SimpleEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
@@ -66,9 +66,9 @@ final class AddAuditEntityCompilerPassTest extends AbstractCompilerPassTestCase
     public function testProcess(bool $force, array $services, array $expectedAuditedEntities): void
     {
         $this->setDefinition('simplethings_entityaudit.config', new Definition());
-        $this->setDefinition('sonata.admin.audit.manager', new Definition());
+        $this->setDefinition('adminata.admin.audit.manager', new Definition());
 
-        $this->setParameter('sonata_doctrine_orm_admin.audit.force', $force);
+        $this->setParameter('adminata_doctrine_orm.audit.force', $force);
         $this->setParameter('simplethings.entityaudit.audited_entities', []);
 
         foreach ($services as $serviceId => $service) {
@@ -83,7 +83,7 @@ final class AddAuditEntityCompilerPassTest extends AbstractCompilerPassTestCase
                 $attributes['audit'] = $service['audit'];
             }
 
-            $definition->addTag('sonata.admin', $attributes);
+            $definition->addTag('adminata.admin', $attributes);
 
             $this->setDefinition($serviceId, $definition);
         }

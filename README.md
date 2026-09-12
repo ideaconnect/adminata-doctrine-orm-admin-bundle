@@ -4,8 +4,8 @@ Doctrine ORM support for [adminata](https://github.com/ideaconnect/adminata) —
 that turns a Doctrine entity into a list, a filter, a form, a show page and an export.
 
 This is a hard fork of `sonata-project/doctrine-orm-admin-bundle` 4.21.0. It `replace`s that
-package, keeps the `Sonata\DoctrineORMAdminBundle\` namespace, the `SonataDoctrineORMAdminBundle`
-bundle class, the `sonata_doctrine_orm_admin` configuration root and every service id, so an
+package, keeps the `IDCT\Adminata\DoctrineORM\` namespace, the `AdminataDoctrineORMBundle`
+bundle class, the `adminata_doctrine_orm` configuration root and every service id, so an
 application's admin classes, service definitions and YAML carry over untouched. What changes is
 underneath: it is built against `idct/adminata` rather than the seven `sonata-project` packages.
 
@@ -21,11 +21,11 @@ composer require idct/adminata-doctrine-orm-admin-bundle
 Register the two bundles in `config/bundles.php`:
 
 ```php
-Sonata\AdminBundle\SonataAdminBundle::class => ['all' => true],
-Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle::class => ['all' => true],
+IDCT\Adminata\AdminataBundle::class => ['all' => true],
+IDCT\Adminata\DoctrineORM\AdminataDoctrineORMBundle::class => ['all' => true],
 ```
 
-Two lines, not seven: `SonataAdminBundle` carries the block, Doctrine, form, Twig-helper and
+Two lines, not seven: `AdminataBundle` carries the block, Doctrine, form, Twig-helper and
 exporter stacks, so there is no `SonataBlockBundle`, `SonataDoctrineBundle`, `SonataFormBundle`,
 `SonataTwigBundle` or `SonataExporterBundle` to register.
 

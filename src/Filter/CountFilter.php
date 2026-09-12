@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\Operator\NumberOperatorType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\NumberOperatorType;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 use Symfony\Component\Form\Extension\Core\Type\NumberType as FormNumberType;
 
 final class CountFilter extends Filter

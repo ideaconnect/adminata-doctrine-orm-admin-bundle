@@ -11,14 +11,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Filter;
+namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Query\Expr;
 use Doctrine\ORM\QueryBuilder;
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
 
 abstract class FilterTestCase extends TestCase
 {

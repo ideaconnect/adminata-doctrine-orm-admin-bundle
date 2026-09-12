@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Block;
+namespace IDCT\Adminata\DoctrineORM\Block;
 
 use SimpleThings\EntityAudit\AuditReader;
-use Sonata\AdminBundle\Block\BlockContextInterface;
-use Sonata\AdminBundle\Block\Service\AbstractBlockService;
+use IDCT\Adminata\Block\BlockContextInterface;
+use IDCT\Adminata\Block\Service\AbstractBlockService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Twig\Environment;
@@ -58,7 +58,7 @@ final class AuditBlockService extends AbstractBlockService
     {
         $resolver->setDefaults([
             'limit' => 10,
-            'template' => '@SonataDoctrineORMAdmin/Block/block_audit.html.twig',
+            'template' => '@AdminataDoctrineORM/Block/block_audit.html.twig',
         ]);
     }
 }

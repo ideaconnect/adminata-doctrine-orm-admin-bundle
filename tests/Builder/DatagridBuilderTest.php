@@ -11,26 +11,26 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Builder;
+namespace IDCT\Adminata\DoctrineORM\Tests\Builder;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\Datagrid\Datagrid;
-use Sonata\AdminBundle\Datagrid\DatagridInterface;
-use Sonata\AdminBundle\Datagrid\Pager;
-use Sonata\AdminBundle\Datagrid\SimplePager;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionCollection;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserInterface;
-use Sonata\AdminBundle\Filter\FilterFactoryInterface;
-use Sonata\AdminBundle\Translator\FormLabelTranslatorStrategy;
-use Sonata\DoctrineORMAdminBundle\Builder\DatagridBuilder;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\FieldDescription;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelFilter;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\Datagrid\Datagrid;
+use IDCT\Adminata\Datagrid\DatagridInterface;
+use IDCT\Adminata\Datagrid\Pager;
+use IDCT\Adminata\Datagrid\SimplePager;
+use IDCT\Adminata\FieldDescription\FieldDescriptionCollection;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
+use IDCT\Adminata\Filter\FilterFactoryInterface;
+use IDCT\Adminata\Translator\FormLabelTranslatorStrategy;
+use IDCT\Adminata\DoctrineORM\Builder\DatagridBuilder;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
+use IDCT\Adminata\DoctrineORM\Filter\ModelFilter;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\Guess\TypeGuess;

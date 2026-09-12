@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Functional\Admin;
+namespace IDCT\Adminata\DoctrineORM\Tests\Functional\Admin;
 
-use Sonata\AdminBundle\Form\Type\Operator\EqualOperatorType;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
 
 final class UuidEntityAdminTest extends BaseAdminTestCase
 {

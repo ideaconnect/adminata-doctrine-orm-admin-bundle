@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Functional;
+namespace IDCT\Adminata\DoctrineORM\Tests\Functional;
 
 use PHPUnit\Framework\Attributes\Group;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +35,7 @@ final class EmbeddedMappingTest extends BasePantherTestCase
             'filter[address__street][value]' => 'Mancha',
         ]);
 
-        self::assertSelectorTextContains('.sonata-link-identifier', 'Miguel de Cervantes');
+        self::assertSelectorTextContains('.adminata-link-identifier', 'Miguel de Cervantes');
     }
 
     public function testCreateEntityWithEmbedded(): void

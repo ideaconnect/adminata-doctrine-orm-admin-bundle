@@ -115,12 +115,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Sonata\\DoctrineORMAdminBundle\\": "src/"
+            "IDCT\\Adminata\\DoctrineORM\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sonata\\DoctrineORMAdminBundle\\Tests\\": "tests/"
+            "IDCT\\Adminata\\DoctrineORM\\Tests\\": "tests/"
         }
     },
     "config": {

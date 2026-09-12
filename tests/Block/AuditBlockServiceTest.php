@@ -11,15 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Block;
+namespace IDCT\Adminata\DoctrineORM\Tests\Block;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
 use SimpleThings\EntityAudit\Revision;
-use Sonata\AdminBundle\Block\BlockContextInterface;
-use Sonata\AdminBundle\Model\Block;
-use Sonata\AdminBundle\Test\BlockServiceTestCase;
-use Sonata\DoctrineORMAdminBundle\Block\AuditBlockService;
+use IDCT\Adminata\Block\BlockContextInterface;
+use IDCT\Adminata\Model\Block;
+use IDCT\Adminata\Test\BlockServiceTestCase;
+use IDCT\Adminata\DoctrineORM\Block\AuditBlockService;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>
@@ -91,7 +91,7 @@ final class AuditBlockServiceTest extends BlockServiceTestCase
         self::assertSettings([
             'attr' => [],
             'limit' => 10,
-            'template' => '@SonataDoctrineORMAdmin/Block/block_audit.html.twig',
+            'template' => '@AdminataDoctrineORM/Block/block_audit.html.twig',
         ], $blockContext);
     }
 }

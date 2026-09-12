@@ -14,7 +14,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\PHPUnit;
+namespace IDCT\Adminata\DoctrineORM\Tests\PHPUnit;
 
 use PHPUnit\Event\TestSuite\Loaded;
 use PHPUnit\Event\TestSuite\LoadedSubscriber;
@@ -22,9 +22,9 @@ use PHPUnit\Runner\Extension\Extension;
 use PHPUnit\Runner\Extension\Facade;
 use PHPUnit\Runner\Extension\ParameterCollection;
 use PHPUnit\TextUI\Configuration\Configuration;
-use Sonata\DoctrineORMAdminBundle\Tests\App\AppKernel;
-use Sonata\DoctrineORMAdminBundle\Tests\Support\ConsoleRunner;
-use Sonata\DoctrineORMAdminBundle\Tests\Support\TestDatabase;
+use IDCT\Adminata\DoctrineORM\Tests\App\AppKernel;
+use IDCT\Adminata\DoctrineORM\Tests\Support\ConsoleRunner;
+use IDCT\Adminata\DoctrineORM\Tests\Support\TestDatabase;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**

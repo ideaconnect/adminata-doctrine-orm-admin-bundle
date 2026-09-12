@@ -11,24 +11,24 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\DependencyInjection;
+namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection;
 
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\SonataDoctrineORMAdminExtension;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\AdminataDoctrineORMExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-final class SonataDoctrineORMAdminExtensionTest extends TestCase
+final class AdminataDoctrineORMExtensionTest extends TestCase
 {
     public function testEntityManagerSetFactory(): void
     {
         $configuration = new ContainerBuilder();
         $configuration->setParameter('kernel.bundles', ['SimpleThingsEntityAuditBundle' => true]);
-        $loader = new SonataDoctrineORMAdminExtension();
+        $loader = new AdminataDoctrineORMExtension();
         $loader->load([], $configuration);
 
-        $definition = $configuration->getDefinition('sonata.admin.entity_manager');
+        $definition = $configuration->getDefinition('adminata.admin.entity_manager');
 
         static::assertNotNull($definition->getFactory());
-        static::assertNotFalse($configuration->getParameter('sonata_doctrine_orm_admin.audit.force'));
+        static::assertNotFalse($configuration->getParameter('adminata_doctrine_orm.audit.force'));
     }
 }

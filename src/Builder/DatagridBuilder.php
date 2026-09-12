@@ -11,22 +11,22 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Builder;
+namespace IDCT\Adminata\DoctrineORM\Builder;
 
-use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\Builder\DatagridBuilderInterface;
-use Sonata\AdminBundle\Datagrid\Datagrid;
-use Sonata\AdminBundle\Datagrid\DatagridInterface;
-use Sonata\AdminBundle\Datagrid\PagerInterface;
-use Sonata\AdminBundle\Datagrid\SimplePager;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserInterface;
-use Sonata\AdminBundle\Filter\FilterFactoryInterface;
-use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\Pager;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelAutocompleteFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelFilter;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\Builder\DatagridBuilderInterface;
+use IDCT\Adminata\Datagrid\Datagrid;
+use IDCT\Adminata\Datagrid\DatagridInterface;
+use IDCT\Adminata\Datagrid\PagerInterface;
+use IDCT\Adminata\Datagrid\SimplePager;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
+use IDCT\Adminata\Filter\FilterFactoryInterface;
+use IDCT\Adminata\Form\Type\ModelAutocompleteType;
+use IDCT\Adminata\DoctrineORM\Datagrid\Pager;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Filter\ModelAutocompleteFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ModelFilter;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormFactoryInterface;

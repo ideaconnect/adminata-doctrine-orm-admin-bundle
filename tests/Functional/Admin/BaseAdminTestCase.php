@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Functional\Admin;
+namespace IDCT\Adminata\DoctrineORM\Tests\Functional\Admin;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -71,7 +71,7 @@ abstract class BaseAdminTestCase extends WebTestCase
         $crawler = $client->followRedirect();
 
         if (null !== $rowsAfter) {
-            static::assertCount($rowsAfter, $crawler->filter('.sonata-ba-list tbody tr'));
+            static::assertCount($rowsAfter, $crawler->filter('.adminata-list tbody tr'));
         }
 
         self::assertResponseIsSuccessful();
@@ -92,7 +92,7 @@ abstract class BaseAdminTestCase extends WebTestCase
         ]);
 
         self::assertResponseIsSuccessful();
-        static::assertCount($count, $crawler->filter('.sonata-ba-list tbody tr'));
+        static::assertCount($count, $crawler->filter('.adminata-list tbody tr'));
     }
 
     abstract public function provideAdminBaseUrl(): string;

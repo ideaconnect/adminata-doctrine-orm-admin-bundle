@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\Common\Collections\Collection;
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
-use Sonata\AdminBundle\Form\Type\Operator\EqualOperatorType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\ModelAutocompleteType;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 /**
  * NEXT_MAJOR: Remove this filter.

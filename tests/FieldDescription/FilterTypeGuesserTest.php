@@ -11,23 +11,23 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\FieldDescription;
+namespace IDCT\Adminata\DoctrineORM\Tests\FieldDescription;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\AdminBundle\Form\Type\Operator\EqualOperatorType;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\FilterTypeGuesser;
-use Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\DateTimeFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\ModelFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\NumberFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\StringFilter;
-use Sonata\DoctrineORMAdminBundle\Filter\TimeFilter;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\Enum\Suit;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\Form\Type\Operator\EqualOperatorType;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FilterTypeGuesser;
+use IDCT\Adminata\DoctrineORM\Filter\BooleanFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ChoiceFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateFilter;
+use IDCT\Adminata\DoctrineORM\Filter\DateTimeFilter;
+use IDCT\Adminata\DoctrineORM\Filter\ModelFilter;
+use IDCT\Adminata\DoctrineORM\Filter\NumberFilter;
+use IDCT\Adminata\DoctrineORM\Filter\StringFilter;
+use IDCT\Adminata\DoctrineORM\Filter\TimeFilter;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Enum\Suit;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;

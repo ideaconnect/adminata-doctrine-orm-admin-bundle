@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Exporter;
+namespace IDCT\Adminata\DoctrineORM\Tests\Exporter;
 
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Exporter\Source\DoctrineORMQuerySourceIterator;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Exporter\DataSource;
+use IDCT\Adminata\Exporter\Source\DoctrineORMQuerySourceIterator;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Exporter\DataSource;
 
 final class DataSourceTest extends TestCase
 {

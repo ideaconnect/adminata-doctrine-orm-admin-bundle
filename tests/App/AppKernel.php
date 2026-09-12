@@ -11,15 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App;
+namespace IDCT\Adminata\DoctrineORM\Tests\App;
 
 use DAMA\DoctrineTestBundle\DAMADoctrineTestBundle;
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\CacheCompatibilityPass;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
 use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Knp\Bundle\MenuBundle\KnpMenuBundle;
-use Sonata\AdminBundle\SonataAdminBundle;
-use Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle;
+use IDCT\Adminata\AdminataBundle;
+use IDCT\Adminata\DoctrineORM\AdminataDoctrineORMBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Bundle\SecurityBundle\SecurityBundle;
@@ -42,8 +42,8 @@ final class AppKernel extends Kernel
             new FrameworkBundle(),
             new KnpMenuBundle(),
             new SecurityBundle(),
-            new SonataAdminBundle(),
-            new SonataDoctrineORMAdminBundle(),
+            new AdminataBundle(),
+            new AdminataDoctrineORMBundle(),
             new TwigBundle(),
             new DoctrineFixturesBundle(),
         ];
@@ -105,6 +105,6 @@ final class AppKernel extends Kernel
 
     private function getBaseDir(): string
     {
-        return sys_get_temp_dir().'/sonata-doctrine-orm-admin-bundle/var/';
+        return sys_get_temp_dir().'/adminata-doctrine-orm-admin-bundle/var/';
     }
 }

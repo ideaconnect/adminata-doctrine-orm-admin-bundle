@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Builder;
+namespace IDCT\Adminata\DoctrineORM\Builder;
 
-use Sonata\AdminBundle\Builder\AbstractFormContractor;
+use IDCT\Adminata\Builder\AbstractFormContractor;
 
 final class FormContractor extends AbstractFormContractor
 {

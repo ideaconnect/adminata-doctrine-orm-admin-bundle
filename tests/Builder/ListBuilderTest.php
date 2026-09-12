@@ -11,18 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Builder;
+namespace IDCT\Adminata\DoctrineORM\Tests\Builder;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\Datagrid\ListMapper;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserInterface;
-use Sonata\DoctrineORMAdminBundle\Builder\ListBuilder;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\FieldDescription;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\Datagrid\ListMapper;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
+use IDCT\Adminata\DoctrineORM\Builder\ListBuilder;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
 use Symfony\Component\Form\Guess\Guess;
 use Symfony\Component\Form\Guess\TypeGuess;
 
@@ -65,7 +65,7 @@ final class ListBuilderTest extends TestCase
         $this->listBuilder->addField($list, 'actions', $fieldDescription);
 
         static::assertSame(
-            '@SonataAdmin/CRUD/list__action.html.twig',
+            '@Adminata/CRUD/list__action.html.twig',
             $list->get('foo')->getTemplate(),
             'Custom list action field has a default list action template assigned'
         );
@@ -95,7 +95,7 @@ final class ListBuilderTest extends TestCase
         static::assertIsArray($actions['test']);
         static::assertArrayHasKey('template', $actions['test']);
         static::assertSame(
-            '@SonataAdmin/CRUD/list__action_test.html.twig',
+            '@Adminata/CRUD/list__action_test.html.twig',
             $fieldDescription->getOption('actions')['test']['template']
         );
     }
@@ -122,19 +122,19 @@ final class ListBuilderTest extends TestCase
     {
         yield 'one-to-one' => [
             ClassMetadata::ONE_TO_ONE,
-            '@SonataAdmin/CRUD/Association/list_one_to_one.html.twig',
+            '@Adminata/CRUD/Association/list_one_to_one.html.twig',
         ];
         yield 'many-to-one' => [
             ClassMetadata::MANY_TO_ONE,
-            '@SonataAdmin/CRUD/Association/list_many_to_one.html.twig',
+            '@Adminata/CRUD/Association/list_many_to_one.html.twig',
         ];
         yield 'one-to-many' => [
             ClassMetadata::ONE_TO_MANY,
-            '@SonataAdmin/CRUD/Association/list_one_to_many.html.twig',
+            '@Adminata/CRUD/Association/list_one_to_many.html.twig',
         ];
         yield 'many-to-many' => [
             ClassMetadata::MANY_TO_MANY,
-            '@SonataAdmin/CRUD/Association/list_many_to_many.html.twig',
+            '@Adminata/CRUD/Association/list_many_to_many.html.twig',
         ];
     }
 

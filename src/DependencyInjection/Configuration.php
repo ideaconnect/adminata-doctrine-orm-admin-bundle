@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\DependencyInjection;
+namespace IDCT\Adminata\DoctrineORM\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -31,7 +31,7 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('sonata_doctrine_orm_admin');
+        $treeBuilder = new TreeBuilder('adminata_doctrine_orm');
 
         $treeBuilder->getRootNode()
             ->children()

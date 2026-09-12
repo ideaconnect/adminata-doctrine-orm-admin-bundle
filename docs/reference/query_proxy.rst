@@ -18,7 +18,7 @@ The ``ProxyQuery`` object is used to add missing features from the original `Doc
   causes performance issues and you are sure there will be no duplicates.
   To do so, simply call ``setDistinct(false)``::
 
-      use Sonata\AdminBundle\Datagrid\ORM\ProxyQuery;
+      use IDCT\Adminata\Datagrid\ORM\ProxyQuery;
 
       $queryBuilder = $this->em->createQueryBuilder();
       $queryBuilder->from('Post', 'p');

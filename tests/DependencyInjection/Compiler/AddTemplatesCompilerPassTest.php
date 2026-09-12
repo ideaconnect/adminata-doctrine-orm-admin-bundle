@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\Tests\DependencyInjection\Compiler;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddTemplatesCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddTemplatesCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
@@ -24,14 +24,14 @@ final class AddTemplatesCompilerPassTest extends AbstractCompilerPassTestCase
     {
         $admin = new Definition(null);
         $admin->addMethodCall('setFilterTheme', [['custom_call.twig.html']]);
-        $admin->addTag('sonata.admin', ['manager_type' => 'orm']);
+        $admin->addTag('adminata.admin', ['manager_type' => 'orm']);
 
         $this->setDefinition('my.admin', $admin);
 
         $this->compile();
 
-        static::assertContainerBuilderHasServiceDefinitionWithMethodCall('my.admin', 'setFilterTheme', [['@SonataDoctrineORMAdmin/Form/filter_admin_fields.html.twig', 'custom_call.twig.html']]);
-        static::assertContainerBuilderHasServiceDefinitionWithMethodCall('my.admin', 'setFormTheme', [['@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig']]);
+        static::assertContainerBuilderHasServiceDefinitionWithMethodCall('my.admin', 'setFilterTheme', [['@AdminataDoctrineORM/Form/filter_admin_fields.html.twig', 'custom_call.twig.html']]);
+        static::assertContainerBuilderHasServiceDefinitionWithMethodCall('my.admin', 'setFormTheme', [['@AdminataDoctrineORM/Form/form_admin_fields.html.twig']]);
     }
 
     protected function registerCompilerPass(ContainerBuilder $container): void

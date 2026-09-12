@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Functional;
+namespace IDCT\Adminata\DoctrineORM\Tests\Functional;
 
 use Facebook\WebDriver\Remote\DesiredCapabilities;
-use Sonata\DoctrineORMAdminBundle\Tests\Support\TestServer;
+use IDCT\Adminata\DoctrineORM\Tests\Support\TestServer;
 use Symfony\Component\Panther\Client;
 use Symfony\Component\Panther\PantherTestCase;
 

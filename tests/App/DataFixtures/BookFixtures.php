@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Author;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Book;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Category;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Reader;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Author;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Book;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Category;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Reader;
 
 final class BookFixtures extends Fixture implements DependentFixtureInterface
 {

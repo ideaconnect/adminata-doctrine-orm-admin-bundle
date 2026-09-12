@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\Operator\StringOperatorType;
-use Sonata\AdminBundle\Search\SearchableFilterInterface;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\StringOperatorType;
+use IDCT\Adminata\Search\SearchableFilterInterface;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 final class StringFilter extends Filter implements SearchableFilterInterface
 {

@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Sub;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Sub;
 
 final class SubFixtures extends Fixture
 {

@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Datagrid;
+namespace IDCT\Adminata\DoctrineORM\Datagrid;
 
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
-use Sonata\AdminBundle\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
+use IDCT\Adminata\Datagrid\ProxyQueryInterface as BaseProxyQueryInterface;
 
 /**
  * @phpstan-template-covariant T of object
@@ -42,7 +42,7 @@ interface ProxyQueryInterface extends BaseProxyQueryInterface
     /**
      * This method should be preferred over `$this->getQueryBuilder()->getQuery()`
      * since some changes are done to the query builder in order to handle all the
-     * previously called Sonata\AdminBundle\Datagrid\ProxyQueryInterface methods.
+     * previously called IDCT\Adminata\Datagrid\ProxyQueryInterface methods.
      */
     public function getDoctrineQuery(): Query;
 }

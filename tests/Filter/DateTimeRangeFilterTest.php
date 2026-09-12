@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Filter;
+namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\DateTimeRangeType;
-use Sonata\AdminBundle\Form\Type\Operator\DateRangeOperatorType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Filter\DateTimeRangeFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\DateTimeRangeType;
+use IDCT\Adminata\Form\Type\Operator\DateRangeOperatorType;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Filter\DateTimeRangeFilter;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>

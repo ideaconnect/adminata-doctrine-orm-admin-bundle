@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler;
+namespace IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -27,10 +27,10 @@ final class AddGuesserCompilerPass implements CompilerPassInterface
     public function process(ContainerBuilder $container): void
     {
         // ListBuilder
-        if ($container->hasDefinition('sonata.admin.guesser.orm_list_chain')) {
-            $definition = $container->getDefinition('sonata.admin.guesser.orm_list_chain');
+        if ($container->hasDefinition('adminata.admin.guesser.orm_list_chain')) {
+            $definition = $container->getDefinition('adminata.admin.guesser.orm_list_chain');
             $services = [];
-            foreach ($container->findTaggedServiceIds('sonata.admin.guesser.orm_list') as $id => $attributes) {
+            foreach ($container->findTaggedServiceIds('adminata.admin.guesser.orm_list') as $id => $attributes) {
                 $services[] = new Reference($id);
             }
 
@@ -38,10 +38,10 @@ final class AddGuesserCompilerPass implements CompilerPassInterface
         }
 
         // DatagridBuilder
-        if ($container->hasDefinition('sonata.admin.guesser.orm_datagrid_chain')) {
-            $definition = $container->getDefinition('sonata.admin.guesser.orm_datagrid_chain');
+        if ($container->hasDefinition('adminata.admin.guesser.orm_datagrid_chain')) {
+            $definition = $container->getDefinition('adminata.admin.guesser.orm_datagrid_chain');
             $services = [];
-            foreach ($container->findTaggedServiceIds('sonata.admin.guesser.orm_datagrid') as $id => $attributes) {
+            foreach ($container->findTaggedServiceIds('adminata.admin.guesser.orm_datagrid') as $id => $attributes) {
                 $services[] = new Reference($id);
             }
 
@@ -49,10 +49,10 @@ final class AddGuesserCompilerPass implements CompilerPassInterface
         }
 
         // ShowBuilder
-        if ($container->hasDefinition('sonata.admin.guesser.orm_show_chain')) {
-            $definition = $container->getDefinition('sonata.admin.guesser.orm_show_chain');
+        if ($container->hasDefinition('adminata.admin.guesser.orm_show_chain')) {
+            $definition = $container->getDefinition('adminata.admin.guesser.orm_show_chain');
             $services = [];
-            foreach ($container->findTaggedServiceIds('sonata.admin.guesser.orm_show') as $id => $attributes) {
+            foreach ($container->findTaggedServiceIds('adminata.admin.guesser.orm_show') as $id => $attributes) {
                 $services[] = new Reference($id);
             }
 

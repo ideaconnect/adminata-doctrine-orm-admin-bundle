@@ -11,13 +11,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Filter;
+namespace IDCT\Adminata\DoctrineORM\Filter;
 
 use Doctrine\DBAL\Types\Types;
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\AdminBundle\Form\Type\Operator\DateOperatorType;
-use Sonata\AdminBundle\Form\Type\Operator\DateRangeOperatorType;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\Form\Type\Operator\DateOperatorType;
+use IDCT\Adminata\Form\Type\Operator\DateRangeOperatorType;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
 
 abstract class AbstractDateFilter extends Filter
 {

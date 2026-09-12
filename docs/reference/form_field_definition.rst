@@ -12,9 +12,9 @@ Example
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Form\Type\ModelListType;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Form\Type\ModelListType;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -45,9 +45,9 @@ you can use the corresponding option in the form field definition::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Form\Type\ModelListType;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Form\Type\ModelListType;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -62,7 +62,7 @@ you can use the corresponding option in the form field definition::
         }
     }
 
-This placeholder is translated using the ``SonataAdminBundle`` catalog.
+This placeholder is translated using the ``AdminataBundle`` catalog.
 
 Advanced usage: File management
 -------------------------------
@@ -71,8 +71,8 @@ If you want to use custom types from the Form framework you must use the ``addTy
 
     namespace Sonata\MediaBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
 
     final class MediaAdmin extends AbstractAdmin
     {
@@ -105,17 +105,17 @@ If you have many ``Post`` linked to one ``User``, then the ``Post`` form should 
 
 The AdminBundle provides 2 options:
 
-* ``Sonata\AdminBundle\Form\Type\ModelType``: the ``User`` list is set in a select widget with an `Add` button to create a new ``User``,
-* ``Sonata\AdminBundle\Form\Type\ModelListType``: the ``User`` list is set in a model where you can search, select and delete a ``User``.
+* ``IDCT\Adminata\Form\Type\ModelType``: the ``User`` list is set in a select widget with an `Add` button to create a new ``User``,
+* ``IDCT\Adminata\Form\Type\ModelListType``: the ``User`` list is set in a model where you can search, select and delete a ``User``.
 
 The following example shows both types in action::
 
     namespace Sonata\NewsBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Form\Type\ModelListType;
-    use Sonata\AdminBundle\Form\Type\ModelType;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Form\Type\ModelListType;
+    use IDCT\Adminata\Form\Type\ModelType;
 
     final class PostAdmin extends AbstractAdmin
     {
@@ -165,9 +165,9 @@ The following example shows the ``CollectionType`` in action::
 
     namespace Sonata\MediaBundle\Admin;
 
-    use Sonata\AdminBundle\Admin\AbstractAdmin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Form\Type\CollectionType;
+    use IDCT\Adminata\Admin\AbstractAdmin;
+    use IDCT\Adminata\Form\FormMapper;
+    use IDCT\Adminata\Form\Type\CollectionType;
 
     final class GalleryAdmin extends AbstractAdmin
     {

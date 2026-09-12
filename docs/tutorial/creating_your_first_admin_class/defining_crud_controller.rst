@@ -22,7 +22,7 @@ CommentAdminController
 
     namespace Tutorial\BlogBundle\Controller;
 
-    use Sonata\AdminBundle\Controller\CRUDController;
+    use IDCT\Adminata\Controller\CRUDController;
     
     final class CommentAdminController extends CRUDController
     {
@@ -38,7 +38,7 @@ PostAdminController
 
     namespace Tutorial\BlogBundle\Controller;
 
-    use Sonata\AdminBundle\Controller\CRUDController;
+    use IDCT\Adminata\Controller\CRUDController;
 
     final class PostAdminController extends CRUDController
     {
@@ -54,7 +54,7 @@ TagAdminController
 
     namespace Tutorial\BlogBundle\Controller;
 
-    use Sonata\AdminBundle\Controller\CRUDController;
+    use IDCT\Adminata\Controller\CRUDController;
 
     final class TagAdminController extends CRUDController
     {

@@ -2,7 +2,7 @@
 
 <!--
     The suite of the forked sonata-project/doctrine-orm-admin-bundle, running against
-    idct/adminata. Its databases are created by Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\
+    idct/adminata. Its databases are created by IDCT\Adminata\DoctrineORM\Tests\PHPUnit\
     DatabaseExtension the first time the suite loads.
 -->
 
@@ -38,14 +38,14 @@
     </source>
 
     <extensions>
-        <bootstrap class="Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\DatabaseExtension" />
+        <bootstrap class="IDCT\Adminata\DoctrineORM\Tests\PHPUnit\DatabaseExtension" />
         <bootstrap class="Symfony\Component\Panther\ServerExtension" />
         <bootstrap class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
     </extensions>
 
     <php>
         <ini name="precision" value="8" />
-        <server name="KERNEL_CLASS" value="Sonata\DoctrineORMAdminBundle\Tests\App\AppKernel" />
+        <server name="KERNEL_CLASS" value="IDCT\Adminata\DoctrineORM\Tests\App\AppKernel" />
         <!-- adminata supports MySQL, MariaDB and Percona; `docker compose up -d` starts a
              matching MySQL. Override these to run the suite against your own server. -->
         <server name="DATABASE_URL" value="mysql://root:adminata@127.0.0.1:7010/adminata_orm_test?serverVersion=8.4.0&amp;charset=utf8mb4" />

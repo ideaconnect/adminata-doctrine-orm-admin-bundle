@@ -11,9 +11,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\DependencyInjection;
+namespace IDCT\Adminata\DoctrineORM\DependencyInjection;
 
-use Sonata\AdminBundle\DependencyInjection\AbstractSonataAdminExtension;
+use IDCT\Adminata\DependencyInjection\AbstractAdminataExtension;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -24,7 +24,7 @@ use Symfony\Component\Security\Acl\Model\ObjectIdentityInterface;
  * @author Thomas Rabaix <thomas.rabaix@sonata-project.org>
  * @author Michael Williams <michael.williams@funsational.com>
  */
-final class SonataDoctrineORMAdminExtension extends AbstractSonataAdminExtension
+final class AdminataDoctrineORMExtension extends AbstractAdminataExtension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
@@ -44,7 +44,7 @@ final class SonataDoctrineORMAdminExtension extends AbstractSonataAdminExtension
         if (isset($bundles['SimpleThingsEntityAuditBundle'])) {
             $loader->load('audit.php');
 
-            $container->setParameter('sonata_doctrine_orm_admin.audit.force', $config['audit']['force']);
+            $container->setParameter('adminata_doctrine_orm.audit.force', $config['audit']['force']);
         }
 
         if (interface_exists(ObjectIdentityInterface::class)) {
@@ -52,15 +52,15 @@ final class SonataDoctrineORMAdminExtension extends AbstractSonataAdminExtension
             $loader->load('security.php');
         }
 
-        $container->setParameter('sonata_doctrine_orm_admin.entity_manager', $config['entity_manager']);
+        $container->setParameter('adminata_doctrine_orm.entity_manager', $config['entity_manager']);
 
-        $container->setParameter('sonata_doctrine_orm_admin.templates', $config['templates']);
+        $container->setParameter('adminata_doctrine_orm.templates', $config['templates']);
 
         // define the templates
-        $container->getDefinition('sonata.admin.builder.orm_list')
+        $container->getDefinition('adminata.admin.builder.orm_list')
             ->replaceArgument(1, $config['templates']['types']['list']);
 
-        $container->getDefinition('sonata.admin.builder.orm_show')
+        $container->getDefinition('adminata.admin.builder.orm_show')
             ->replaceArgument(1, $config['templates']['types']['show']);
     }
 }

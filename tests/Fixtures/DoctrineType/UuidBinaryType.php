@@ -11,11 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\StringType;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
 
 /**
  * Mock for a custom doctrine type used in the ModelManagerTest suite.
@@ -24,7 +24,7 @@ use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Util\NonIntegerIdentifierTestCl
  */
 final class UuidBinaryType extends StringType
 {
-    public const string NAME = 'sonata_uuid_binary';
+    public const string NAME = 'adminata_uuid_binary';
 
     public function getName(): string
     {

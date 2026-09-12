@@ -51,9 +51,9 @@ will be audited. You can change this behavior by setting the ``force`` option to
 
 .. code-block:: yaml
 
-    # config/packages/sonata_doctrine_orm_admin.yaml
+    # config/packages/adminata_doctrine_orm.yaml
 
-    sonata_doctrine_orm_admin:
+    adminata_doctrine_orm:
         audit:
             force: false
 
@@ -65,7 +65,7 @@ It is also possible to configure an entity audit with the attribute `audit` in `
         <argument/>
         <argument>Tutorial\BlogBundle\Entity\Post</argument>
         <argument>TutorialBlogBundle:PostAdmin</argument>
-        <tag name="sonata.admin" manager_type="orm" audit="false" group="tutorial_blog" label="Post"/>
+        <tag name="adminata.admin" manager_type="orm" audit="false" group="tutorial_blog" label="Post"/>
     </service>
 
 Usage
@@ -88,10 +88,10 @@ Entity compare
 
 .. versionadded:: 2.3
 
-    The history compare action was added in SonataAdminBundle 2.3.
+    The history compare action was added in AdminataBundle 2.3.
 
 For making a comparison of two revisions, the ``show`` definition will be used for rendering both revisions. All rows where the output of the revisions doesn't match, the row is marked.
 
-The ``@SonataAdmin/CRUD/base_show_field.html.twig`` accepts an optional parameter ``field_compare`` which should contain a secondary field to compare. When assigned, the ``field`` block will be rendered again with the ``field_compare`` value as input.
+The ``@Adminata/CRUD/base_show_field.html.twig`` accepts an optional parameter ``field_compare`` which should contain a secondary field to compare. When assigned, the ``field`` block will be rendered again with the ``field_compare`` value as input.
 
-This means all show_field views should extend ``@SonataAdmin/CRUD/base_show_field.html.twig`` and should not contain a ``field_compare`` block, since it will automatically use the ``field`` block of the parent view.
+This means all show_field views should extend ``@Adminata/CRUD/base_show_field.html.twig`` and should not contain a ``field_compare`` block, since it will automatically use the ``field`` block of the parent view.

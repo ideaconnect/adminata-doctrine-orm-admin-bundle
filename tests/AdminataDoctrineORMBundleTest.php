@@ -11,26 +11,26 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests;
+namespace IDCT\Adminata\DoctrineORM\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddGuesserCompilerPass;
-use Sonata\DoctrineORMAdminBundle\DependencyInjection\Compiler\AddTemplatesCompilerPass;
-use Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddAuditEntityCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddGuesserCompilerPass;
+use IDCT\Adminata\DoctrineORM\DependencyInjection\Compiler\AddTemplatesCompilerPass;
+use IDCT\Adminata\DoctrineORM\AdminataDoctrineORMBundle;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * @author Marko Kunic <kunicmarko20@gmail.com>
  */
-final class SonataDoctrineORMAdminBundleTest extends TestCase
+final class AdminataDoctrineORMBundleTest extends TestCase
 {
     public function testBuild(): void
     {
         $containerBuilder = new ContainerBuilder();
 
-        $bundle = new SonataDoctrineORMAdminBundle();
+        $bundle = new AdminataDoctrineORMBundle();
         $bundle->build($containerBuilder);
 
         static::assertNotNull($this->findCompilerPass($containerBuilder, AddGuesserCompilerPass::class));

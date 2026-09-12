@@ -13,16 +13,16 @@ declare(strict_types=1);
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-use Sonata\DoctrineORMAdminBundle\Util\ObjectAclManipulator;
+use IDCT\Adminata\DoctrineORM\Util\ObjectAclManipulator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->parameters()
 
-        ->set('sonata.admin.manipulator.acl.object.orm.class', ObjectAclManipulator::class);
+        ->set('adminata.admin.manipulator.acl.object.orm.class', ObjectAclManipulator::class);
 
     $containerConfigurator->services()
 
-        ->set('sonata.admin.manipulator.acl.object.orm', (string) param('sonata.admin.manipulator.acl.object.orm.class'))
+        ->set('adminata.admin.manipulator.acl.object.orm', (string) param('adminata.admin.manipulator.acl.object.orm.class'))
             ->public()
             ->args([
                 service('doctrine'),

@@ -11,19 +11,19 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Builder;
+namespace IDCT\Adminata\DoctrineORM\Tests\Builder;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionCollection;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\AdminBundle\FieldDescription\TypeGuesserInterface;
-use Sonata\DoctrineORMAdminBundle\Builder\ShowBuilder;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\FieldDescription;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\FieldDescription\FieldDescriptionCollection;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\FieldDescription\TypeGuesserInterface;
+use IDCT\Adminata\DoctrineORM\Builder\ShowBuilder;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
 use Symfony\Component\Form\Guess\TypeGuess;
 
 /**
@@ -51,10 +51,10 @@ final class ShowBuilderTest extends TestCase
             $this->guesser,
             [
                 'fakeTemplate' => 'fake',
-                FieldDescriptionInterface::TYPE_ONE_TO_ONE => '@SonataAdmin/CRUD/Association/show_one_to_one.html.twig',
-                FieldDescriptionInterface::TYPE_ONE_TO_MANY => '@SonataAdmin/CRUD/Association/show_one_to_many.html.twig',
-                FieldDescriptionInterface::TYPE_MANY_TO_ONE => '@SonataAdmin/CRUD/Association/show_many_to_one.html.twig',
-                FieldDescriptionInterface::TYPE_MANY_TO_MANY => '@SonataAdmin/CRUD/Association/show_many_to_many.html.twig',
+                FieldDescriptionInterface::TYPE_ONE_TO_ONE => '@Adminata/CRUD/Association/show_one_to_one.html.twig',
+                FieldDescriptionInterface::TYPE_ONE_TO_MANY => '@Adminata/CRUD/Association/show_one_to_many.html.twig',
+                FieldDescriptionInterface::TYPE_MANY_TO_ONE => '@Adminata/CRUD/Association/show_many_to_one.html.twig',
+                FieldDescriptionInterface::TYPE_MANY_TO_MANY => '@Adminata/CRUD/Association/show_many_to_many.html.twig',
             ]
         );
 
@@ -125,22 +125,22 @@ final class ShowBuilderTest extends TestCase
         yield 'one-to-one' => [
             FieldDescriptionInterface::TYPE_ONE_TO_ONE,
             ClassMetadata::ONE_TO_ONE,
-            '@SonataAdmin/CRUD/Association/show_one_to_one.html.twig',
+            '@Adminata/CRUD/Association/show_one_to_one.html.twig',
         ];
         yield 'many-to-one' => [
             FieldDescriptionInterface::TYPE_MANY_TO_ONE,
             ClassMetadata::MANY_TO_ONE,
-            '@SonataAdmin/CRUD/Association/show_many_to_one.html.twig',
+            '@Adminata/CRUD/Association/show_many_to_one.html.twig',
         ];
         yield 'one-to-many' => [
             FieldDescriptionInterface::TYPE_ONE_TO_MANY,
             ClassMetadata::ONE_TO_MANY,
-            '@SonataAdmin/CRUD/Association/show_one_to_many.html.twig',
+            '@Adminata/CRUD/Association/show_one_to_many.html.twig',
         ];
         yield 'many-to-many' => [
             FieldDescriptionInterface::TYPE_MANY_TO_MANY,
             ClassMetadata::MANY_TO_MANY,
-            '@SonataAdmin/CRUD/Association/show_many_to_many.html.twig',
+            '@Adminata/CRUD/Association/show_many_to_many.html.twig',
         ];
     }
 

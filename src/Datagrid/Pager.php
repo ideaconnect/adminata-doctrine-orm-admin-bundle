@@ -11,10 +11,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Datagrid;
+namespace IDCT\Adminata\DoctrineORM\Datagrid;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
-use Sonata\AdminBundle\Datagrid\Pager as BasePager;
+use IDCT\Adminata\Datagrid\Pager as BasePager;
 
 /**
  * Doctrine pager class.

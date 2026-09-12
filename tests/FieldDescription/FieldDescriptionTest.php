@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\FieldDescription;
+namespace IDCT\Adminata\DoctrineORM\Tests\FieldDescription;
 
 use Doctrine\ORM\Mapping\ClassMetadata;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Admin\AdminInterface;
-use Sonata\AdminBundle\Exception\NoValueException;
-use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
-use Sonata\DoctrineORMAdminBundle\FieldDescription\FieldDescription;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\Enum\Suit;
+use IDCT\Adminata\Admin\AdminInterface;
+use IDCT\Adminata\Exception\NoValueException;
+use IDCT\Adminata\FieldDescription\FieldDescriptionInterface;
+use IDCT\Adminata\DoctrineORM\FieldDescription\FieldDescription;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Enum\Suit;
 
 final class FieldDescriptionTest extends TestCase
 {

@@ -11,15 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Filter;
+namespace IDCT\Adminata\DoctrineORM\Tests\Filter;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Query\Expr;
 use PHPUnit\Framework\Attributes\DataProvider;
-use Sonata\AdminBundle\Filter\Model\FilterData;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Filter\Filter;
-use Sonata\DoctrineORMAdminBundle\Filter\StringFilter;
+use IDCT\Adminata\Filter\Model\FilterData;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Filter\Filter;
+use IDCT\Adminata\DoctrineORM\Filter\StringFilter;
 
 final class FilterTest extends FilterTestCase
 {
@@ -46,7 +46,7 @@ final class FilterTest extends FilterTestCase
             )
             ->setParameter('parameter_1', 3);
 
-        static::assertSame('SELECT e FROM Sonata\DoctrineORMAdminBundle\Tests\Filter\MyEntity e WHERE 1 = 2 AND (:parameter_1 = 4 OR 5 = 6)', $queryBuilder->getDQL());
+        static::assertSame('SELECT e FROM IDCT\Adminata\DoctrineORM\Tests\Filter\MyEntity e WHERE 1 = 2 AND (:parameter_1 = 4 OR 5 = 6)', $queryBuilder->getDQL());
 
         $proxyQuery = new ProxyQuery($queryBuilder);
 
@@ -73,7 +73,7 @@ final class FilterTest extends FilterTestCase
     public static function provideOrExpressionCases(): iterable
     {
         yield 'Default behavior' => [
-            'SELECT e FROM Sonata\DoctrineORMAdminBundle\Tests\Filter\MyEntity e WHERE 1 = 2 AND (:parameter_1 = 4 OR 5 = 6)'
+            'SELECT e FROM IDCT\Adminata\DoctrineORM\Tests\Filter\MyEntity e WHERE 1 = 2 AND (:parameter_1 = 4 OR 5 = 6)'
             .' AND e.project LIKE :project_0 AND e.version LIKE :version_1 AND 7 = 8',
             [
                 [

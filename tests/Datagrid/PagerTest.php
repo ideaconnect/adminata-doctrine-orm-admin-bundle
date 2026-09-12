@@ -11,18 +11,18 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Datagrid;
+namespace IDCT\Adminata\DoctrineORM\Tests\Datagrid;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Doctrine\ORM\Tools\SchemaTool;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\Datagrid\Pager;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ORM\User;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ORM\UserBrowser;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\TestEntityManagerFactory;
+use IDCT\Adminata\DoctrineORM\Datagrid\Pager;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ORM\User;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ORM\UserBrowser;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
 
 final class PagerTest extends TestCase
 {

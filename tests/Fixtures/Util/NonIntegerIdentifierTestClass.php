@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Util;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures\Util;
 
 /**
  * This class is used in the ModelManagerTest suite to test non integer/string identifiers.

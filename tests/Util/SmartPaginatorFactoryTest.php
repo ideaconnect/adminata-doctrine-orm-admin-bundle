@@ -11,20 +11,20 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Util;
+namespace IDCT\Adminata\DoctrineORM\Tests\Util;
 
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\CountWalker;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Address;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Author;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Item;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\ProductAttribute;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\TestEntityManagerFactory;
-use Sonata\DoctrineORMAdminBundle\Util\SmartPaginatorFactory;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Address;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Author;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Item;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\ProductAttribute;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\TestEntityManagerFactory;
+use IDCT\Adminata\DoctrineORM\Util\SmartPaginatorFactory;
 
 final class SmartPaginatorFactoryTest extends TestCase
 {

@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Model;
+namespace IDCT\Adminata\DoctrineORM\Tests\Model;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\ConnectionException;
@@ -31,27 +31,27 @@ use Doctrine\Persistence\ManagerRegistry;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Sonata\AdminBundle\Exception\LockException;
-use Sonata\AdminBundle\Exception\ModelManagerException;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
-use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
-use Sonata\DoctrineORMAdminBundle\Model\ModelManager;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\ProductIdType;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\UuidBinaryType;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\UuidType;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\ValueObjectWithMagicToStringImpl;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\DoctrineType\ValueObjectWithToStringImpl;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\AssociatedEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ContainerEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\Embeddable\EmbeddedEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ORM\User;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\Product;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\ProductId;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\SimpleEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\UuidBinaryEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\UuidEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\VersionedEntity;
-use Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
+use IDCT\Adminata\Exception\LockException;
+use IDCT\Adminata\Exception\ModelManagerException;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQuery;
+use IDCT\Adminata\DoctrineORM\Datagrid\ProxyQueryInterface;
+use IDCT\Adminata\DoctrineORM\Model\ModelManager;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\ProductIdType;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\UuidBinaryType;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\UuidType;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\ValueObjectWithMagicToStringImpl;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\DoctrineType\ValueObjectWithToStringImpl;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\AssociatedEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ContainerEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Embeddable\EmbeddedEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ORM\User;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\Product;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\ProductId;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\SimpleEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidBinaryEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\UuidEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity;
+use IDCT\Adminata\DoctrineORM\Tests\Fixtures\Util\NonIntegerIdentifierTestClass;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 final class ModelManagerTest extends TestCase
@@ -549,21 +549,21 @@ final class ModelManagerTest extends TestCase
     public static function provideFailingBatchDeleteCases(): iterable
     {
         yield [
-            'Failed to delete object "Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\VersionedEntity" (id: 42) while'
+            'Failed to delete object "IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity" (id: 42) while'
             .' performing batch deletion (20 objects were successfully deleted before this error)',
             array_fill(0, 21, new VersionedEntity()),
             [null, new ConnectionException()],
         ];
 
         yield [
-            'Failed to delete object "Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\VersionedEntity" (id: 42) while'
+            'Failed to delete object "IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity" (id: 42) while'
             .' performing batch deletion',
             [new VersionedEntity(), new VersionedEntity()],
             [new ConnectionException()],
         ];
 
         yield [
-            'Failed to perform batch deletion for "Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity\VersionedEntity" objects',
+            'Failed to perform batch deletion for "IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity\VersionedEntity" objects',
             null,
             [null],
         ];
@@ -768,7 +768,7 @@ final class ModelManagerTest extends TestCase
         $datagrid = static::createStub(ProxyQueryInterface::class);
 
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Array passed as argument 3 to "Sonata\DoctrineORMAdminBundle\Model\ModelManager::addIdentifiersToQuery()" must not be empty.');
+        $this->expectExceptionMessage('Array passed as argument 3 to "IDCT\Adminata\DoctrineORM\Model\ModelManager::addIdentifiersToQuery()" must not be empty.');
 
         // @phpstan-ignore-next-line
         $this->modelManager->addIdentifiersToQuery(\stdClass::class, $datagrid, []);

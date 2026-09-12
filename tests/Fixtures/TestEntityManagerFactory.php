@@ -11,14 +11,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures;
 
 use Doctrine\Common\EventManager;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMSetup;
-use Sonata\DoctrineORMAdminBundle\Tests\Support\TestDatabase;
+use IDCT\Adminata\DoctrineORM\Tests\Support\TestDatabase;
 
 final class TestEntityManagerFactory
 {
@@ -29,7 +29,7 @@ final class TestEntityManagerFactory
 
         // adminata supports MySQL, MariaDB and Percona only, so these tests run against the
         // MySQL service of the repository's docker-compose.yml on their own database, created by
-        // Sonata\DoctrineORMAdminBundle\Tests\PHPUnit\DatabaseExtension.
+        // IDCT\Adminata\DoctrineORM\Tests\PHPUnit\DatabaseExtension.
         $connection = DriverManager::getConnection(
             TestDatabase::parameters('ADMINATA_TEST_DATABASE_URL', 'adminata_orm_unit_test'),
             $config

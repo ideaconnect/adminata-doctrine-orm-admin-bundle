@@ -11,12 +11,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Model;
+namespace IDCT\Adminata\DoctrineORM\Model;
 
 use SimpleThings\EntityAudit\AuditReader as SimpleThingsAuditReader;
 use SimpleThings\EntityAudit\Revision as EntityAuditRevision;
-use Sonata\AdminBundle\Model\AuditReaderInterface;
-use Sonata\AdminBundle\Model\Revision;
+use IDCT\Adminata\Model\AuditReaderInterface;
+use IDCT\Adminata\Model\Revision;
 
 /**
  * @phpstan-template T of object

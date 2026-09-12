@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\Fixtures\Entity;
+namespace IDCT\Adminata\DoctrineORM\Tests\Fixtures\Entity;
 
 final class Product
 {

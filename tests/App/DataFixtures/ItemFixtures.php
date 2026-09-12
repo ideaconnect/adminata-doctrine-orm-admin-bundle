@@ -11,15 +11,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrineORMAdminBundle\Tests\App\DataFixtures;
+namespace IDCT\Adminata\DoctrineORM\Tests\App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Command;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Item;
-use Sonata\DoctrineORMAdminBundle\Tests\App\Entity\Product;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Command;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Item;
+use IDCT\Adminata\DoctrineORM\Tests\App\Entity\Product;
 
 final class ItemFixtures extends Fixture implements DependentFixtureInterface
 {
